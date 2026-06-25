@@ -38,6 +38,8 @@ docs/
 static/
 ```
 
+This repository is the canonical public documentation for Katselin. It is designed to be readable by both humans and AI assistants.
+
 ## Website
 
 This repository also powers the official website:
