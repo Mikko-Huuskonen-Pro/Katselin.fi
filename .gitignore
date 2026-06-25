@@ -1,0 +1,18 @@
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+
+# VS Code
+.vscode/
+
+# JetBrains
+.idea/
+
+# Node (jos myöhemmin käytät Viteä tai Docusaurusta)
+node_modules/
+dist/
+
+# Logs
+*.log
