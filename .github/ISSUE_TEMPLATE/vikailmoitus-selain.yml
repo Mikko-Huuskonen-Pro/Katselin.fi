@@ -1,0 +1,55 @@
+name: Vikailmoitus (selain)
+description: Katselin-selaimen virhe tai odottamaton käyttäytyminen
+title: "[Selain] "
+labels:
+  - bug
+  - selain
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Kiitos ilmoituksesta. **Älä kirjoita salasanoja, henkilötunnuksia tai pankkitunnuksia.**
+        Ilmoitukset tallentuvat julkiseen GitHub-issueen tässä repossa.
+  - type: textarea
+    id: what
+    attributes:
+      label: Mitä tapahtui
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Mitä odotit
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Toistoaskeleet
+      placeholder: |
+        1. Avaa Katselin
+        2. Kirjoita osoitekenttään …
+        3. …
+    validations:
+      required: true
+  - type: dropdown
+    id: os
+    attributes:
+      label: Käyttöjärjestelmä
+      options:
+        - Windows
+        - Android
+        - Linux
+        - macOS
+        - Muu / en tiedä
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Katselin-versio (jos tiedossa)
+  - type: input
+    id: url
+    attributes:
+      label: URL, hakusana tai sivusto (jos relevantti)
+      placeholder: esim. kela.fi tai https://www.kela.fi/

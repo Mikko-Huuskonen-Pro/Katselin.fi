@@ -1,0 +1,23 @@
+name: Sivusto tai dokumentaatio
+description: Virhe tai parannusehdotus katselin.fi-sivustolle tai docs/-dokumentaatioon
+title: "[Sivusto] "
+labels:
+  - sivusto
+body:
+  - type: textarea
+    id: page
+    attributes:
+      label: Sivu tai tiedosto
+      placeholder: esim. fi/majakka.html tai docs/philosophy/filosofia.md
+    validations:
+      required: true
+  - type: textarea
+    id: what
+    attributes:
+      label: Mitä on vialla tai mitä puuttuu
+    validations:
+      required: true
+  - type: textarea
+    id: suggestion
+    attributes:
+      label: Ehdotettu korjaus (valinnainen)

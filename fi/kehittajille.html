@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Kehittäjille | Katselin</title>
+    <meta name="description" content="Katselimen kehittäjien sivu: arkkitehtuuri, Varustamon sovellukset, Telakka-työnkulku ja repot.">
+    <meta name="color-scheme" content="dark">
+    <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+    <link rel="alternate icon" href="../assets/logo.png" type="image/png">
+    <link rel="apple-touch-icon" href="../assets/logo.png">
+    <link rel="alternate" hreflang="fi" href="/fi/kehittajille.html">
+    <link rel="alternate" hreflang="sv" href="/sv/utvecklare.html">
+    <link rel="canonical" href="https://katselin.fi/fi/kehittajille.html">
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="page">
+            <a class="brand" href="./" aria-label="Katselin – etusivu">
+                <img class="brand-mark" src="../assets/favicon.svg" alt="">
+                <span>Katselin</span>
+            </a>
+            <nav class="nav" aria-label="Päävalikko">
+                <a href="./">Katselin</a>
+                <a href="majakka.html">Majakka</a>
+                <a href="blogi/">Blogi</a>
+                <a href="kehittajille.html" aria-current="page">Kehittäjille</a>
+                <a href="filosofia.html">Filosofia</a>
+                <a href="https://github.com/Mikko-Huuskonen-Pro/Katselin.fi" rel="noopener">GitHub</a>
+                <span class="lang" aria-label="Kieli">
+                    <a href="kehittajille.html" aria-current="true">FI</a>
+                    <a href="../sv/utvecklare.html" hreflang="sv">SV</a>
+                </span>
+            </nav>
+        </div>
+    </header>
+
+    <main class="page">
+        <h1>Kehittäjille</h1>
+        <p class="tagline">
+            Katselin on avoin projekti. Tämä sivu on suunnattu kaikille, jotka haluavat
+            ymmärtää selaimen rakennetta tai rakentaa sille sovelluksia Varustamoon.
+        </p>
+
+        <nav class="doc-nav" aria-label="Kehittäjädokumentaatio">
+            <h2>Dokumentaatio</h2>
+            <ul>
+                <li><a href="kehittajille.html" aria-current="page">Yleiskatsaus</a></li>
+                <li><a href="kehittajille-arkkitehtuuri.html">Arkkitehtuuri</a></li>
+                <li><a href="nykytila.html">Nykytila</a></li>
+                <li><a href="kehittajille-telakka.html">Telakka — Kela</a></li>
+                <li><a href="kehittajille-osallistuminen.html">Osallistuminen</a></li>
+                <li><a href="kehittajille-tietoturva.html">Tietoturva</a></li>
+            </ul>
+        </nav>
+
+        <section>
+            <h2>Repositoriot</h2>
+            <div class="cards">
+                <article class="card">
+                    <h3>Katselin (selain)</h3>
+                    <p>
+                        Servo-pohjainen selainmoottori, Sataman whitelist-logiikka, paikallinen haku
+                        ja servoshell-embedder. Julkaistaan MPL 2.0 -lisenssillä.
+                    </p>
+                    <p>
+                        <a class="btn" href="https://github.com/Mikko-Huuskonen-Pro/Kotisatama" rel="noopener">Lähdekoodi GitHubissa</a>
+                    </p>
+                </article>
+                <article class="card">
+                    <h3>Katselin.fi (tämä sivusto)</h3>
+                    <p>
+                        Viralliset julkiset ohjeet, dokumentaatio ja filosofia. Staattinen
+                        sivusto ilman build-vaihetta. CC BY 4.0.
+                    </p>
+                    <p>
+                        <a class="btn" href="https://github.com/Mikko-Huuskonen-Pro/Katselin.fi" rel="noopener">Repo GitHubissa</a>
+                    </p>
+                </article>
+                <article class="card">
+                    <h3>Katselin Private</h3>
+                    <p>
+                        Whitelist-listat, allekirjoitettu Varustamo-katalogi ja
+                        sisäinen sovelluskehitys (Pulloposti, Missä olen). Suljettu repo.
+                    </p>
+                </article>
+                <article class="card">
+                    <h3>Varustamo</h3>
+                    <p>
+                        Sovellusten testialue, joka ei riipu Katselimen raskaasta buildista.
+                        Tällä hetkellä osa Katselin Private -repoa, tarkoitus eriyttää myöhemmin.
+                    </p>
+                </article>
+            </div>
+        </section>
+
+        <section>
+            <h2>Dokumentaatio</h2>
+            <div class="cards">
+                <article class="card">
+                    <h3>Nykytila</h3>
+                    <p>Mikä toimii nyt, mikä ei — ja mitä rakennetaan seuraavaksi.</p>
+                    <p><a class="btn" href="nykytila.html">Lue nykytila</a></p>
+                </article>
+                <article class="card">
+                    <h3>Arkkitehtuuri</h3>
+                    <p>Komponentit, datavirrat, Meilisearch, selaustilat ja Varustamo.</p>
+                    <p><a class="btn" href="kehittajille-arkkitehtuuri.html">Lue arkkitehtuuri</a></p>
+                </article>
+                <article class="card">
+                    <h3>Telakka — Kela</h3>
+                    <p>Ensimmäinen Telakka-kierros: miten Kela-testataan ilman sivukohtaisia hackeja.</p>
+                    <p><a class="btn" href="kehittajille-telakka.html">Lue Telakka-ohje</a></p>
+                </article>
+                <article class="card">
+                    <h3>Osallistuminen</h3>
+                    <p>Miten auttaa kehityksessä, bugiilmoitukset ja Rust-muutokset.</p>
+                    <p><a class="btn" href="kehittajille-osallistuminen.html">Lue osallistumisohje</a></p>
+                </article>
+                <article class="card">
+                    <h3>Tietoturva</h3>
+                    <p>Haavoittuvuuksien ilmoittaminen ja laajuus.</p>
+                    <p><a class="btn" href="kehittajille-tietoturva.html">Lue tietoturvaohje</a></p>
+                </article>
+            </div>
+            <p>
+                Markdown-lähteet:
+                <a href="https://github.com/Mikko-Huuskonen-Pro/Katselin.fi/tree/main/docs">docs/</a>-hakemistossa.
+            </p>
+        </section>
+
+        <section>
+            <h2>Sovelluskehitys Varustamoon</h2>
+            <p>
+                Varustamo on luotettujen sovellusten varasto. Sovellus on tyypillisesti
+                Tauri 2.0 -sovellus, joka julkaisee paikallisen HTTP-rajapinnan ja jonka
+                Katselin avaa Sataman sisällä omana näkymänään.
+            </p>
+            <p>Ensimmäiset Varustamon sovellukset:</p>
+            <ul>
+                <li><strong>Pulloposti</strong> – salattu offline/BLE-viestintä lähiverkossa ja Bluetoothilla.</li>
+                <li><strong>Missä olen</strong> – yhden painikkeen osoitesovellus, joka kertoo nykyisen sijainnin selkokielellä.</li>
+            </ul>
+            <p>
+                Sovelluksia voidaan kehittää itsenäisesti ilman Katselimen täyttä Servo-buildia.
+                Sovellusten viralliset asennustiedostot allekirjoitetaan ja jaetaan
+                Varustamon kautta.
+            </p>
+        </section>
+
+        <section id="lokikirja">
+            <h2>Lokikirja (selaimen sisäinen palaute)</h2>
+            <p>
+                Työkalupalkin <strong>Lokikirja</strong>-painike lähettää anonyymejä ilmoituksia
+                suoraan tämän repon GitHub-issueihin. Loppukäyttäjä ei kirjaudu GitHubiin.
+            </p>
+            <p><strong>Kehityksessä</strong> aseta ympäristömuuttuja:</p>
+<pre><code>export KOTISATAMA_GITHUB_TOKEN=ghp_xxxxxxxx   # Issues-oikeus Katselin.fi-repoon</code></pre>
+            <p>
+                <strong>Tuotannossa</strong> käytä Cloudflare Workeria
+                (<code>workers/report/</code>) ja aseta <code>KOTISATAMA_REPORT_URL</code>
+                workerin osoitteeseen. Tokenia ei upoteta julkaistuun selaimen binääriin.
+            </p>
+            <p>
+                <a href="https://github.com/Mikko-Huuskonen-Pro/Katselin.fi/blob/main/docs/developer/lokikirja.md" rel="noopener">Täysi Lokikirja-ohje (Markdown)</a>
+                · <a href="palaute.html">Verkkopalautesivu</a> (käyttäjän oma GitHub-tili)
+            </p>
+        </section>
+
+        <section>
+            <h2>Aloita kehitys</h2>
+            <p>
+                Aseta ensin
+                <a href="https://book.servo.org/hacking/setting-up-your-environment.html" rel="noopener">Servon kehitysympäristö</a>.
+                Sen jälkeen klonaa Katselimen repo ja aja:
+            </p>
+<pre><code>git clone https://github.com/Mikko-Huuskonen-Pro/Kotisatama.git
+cd Kotisatama
+./mach build --release
+./mach run</code></pre>
+            <p>
+                Tarkemmat ohjeet, mukaan lukien Android-build ja paikallinen
+                whitelist-konfiguraatio, löytyvät repon
+                <a href="https://github.com/Mikko-Huuskonen-Pro/Kotisatama/blob/main/README.md" rel="noopener">README-tiedostosta</a>.
+            </p>
+        </section>
+
+        <section>
+            <h2>Lisenssit</h2>
+            <ul>
+                <li>Servo-koodi ja Katselimen Servo-muutokset: <a href="https://www.mozilla.org/en-US/MPL/2.0/" rel="noopener">MPL 2.0</a>.</li>
+                <li>Tämä dokumentaatio (Katselin.fi): <a href="../LICENSE.md">CC BY 4.0</a>.</li>
+                <li>Whitelist-data ja Varustamon allekirjoitettu jakelu: hallinnoidaan erillisessä yksityisessä repossa.</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="page">
+            <p class="footer-tagline">Built on Servo. Made in Finland.</p>
+            <div class="footer-row">
+                <span>&copy; 2026 Mikko Huuskonen · <a href="../LICENSE.md">CC BY 4.0</a></span>
+                <span>
+                    <a href="https://github.com/Mikko-Huuskonen-Pro/Katselin.fi" rel="noopener">GitHub</a>
+                    ·
+                    <a href="../sv/utvecklare.html" hreflang="sv">På svenska</a>
+                </span>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

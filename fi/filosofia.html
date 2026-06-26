@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Filosofia | Katselin</title>
+    <meta name="description" content="Katselimen filosofia: Servo on moottori, Katselin on satama. Kaikkea nettiä ei tarvitse tehdä helpoksi – tärkeät asiat pitää tehdä turvallisiksi.">
+    <meta name="color-scheme" content="dark">
+    <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+    <link rel="alternate icon" href="../assets/logo.png" type="image/png">
+    <link rel="apple-touch-icon" href="../assets/logo.png">
+    <link rel="alternate" hreflang="fi" href="/fi/filosofia.html">
+    <link rel="alternate" hreflang="sv" href="/sv/filosofi.html">
+    <link rel="canonical" href="https://katselin.fi/fi/filosofia.html">
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="page">
+            <a class="brand" href="./" aria-label="Katselin – etusivu">
+                <img class="brand-mark" src="../assets/favicon.svg" alt="">
+                <span>Katselin</span>
+            </a>
+            <nav class="nav" aria-label="Päävalikko">
+                <a href="./">Katselin</a>
+                <a href="majakka.html">Majakka</a>
+                <a href="blogi/">Blogi</a>
+                <a href="kehittajille.html">Kehittäjille</a>
+                <a href="filosofia.html" aria-current="page">Filosofia</a>
+                <a href="https://github.com/Mikko-Huuskonen-Pro/Katselin.fi" rel="noopener">GitHub</a>
+                <span class="lang" aria-label="Kieli">
+                    <a href="filosofia.html" aria-current="true">FI</a>
+                    <a href="../sv/filosofi.html" hreflang="sv">SV</a>
+                </span>
+            </nav>
+        </div>
+    </header>
+
+    <main class="page">
+        <h1>Filosofia</h1>
+        <p class="tagline">Miksi Katselin on olemassa.</p>
+
+        <nav class="doc-nav" aria-label="Filosofiadokumentaatio">
+            <h2>Dokumentaatio</h2>
+            <ul>
+                <li><a href="filosofia.html" aria-current="page">Yhteenveto</a></li>
+                <li><a href="filosofia-avomeri.html">Avomeri ja Laituri</a></li>
+                <li><a href="https://github.com/Mikko-Huuskonen-Pro/Katselin.fi/blob/main/docs/philosophy/filosofia.md" rel="noopener">Täysi filosofia (Markdown)</a></li>
+            </ul>
+        </nav>
+
+        <section>
+            <h2>Perusajatus</h2>
+            <p>
+                Katselin ei ole vain käyttöliittymä selaimen päällä. Katselin on turvallinen
+                arkiympäristö, jossa tärkeät digipalvelut tehdään ymmärrettäviksi,
+                rajatuiksi ja luotettaviksi.
+            </p>
+            <blockquote>
+                Tavoite ei ole tehdä koko internetistä helppoa.
+                Tavoite on tehdä tärkeistä asioista turvallisia.
+            </blockquote>
+        </section>
+
+        <section>
+            <h2>Ei Google-riippuvuuksia</h2>
+            <p>
+                Jos jokin tärkeä sivu ei toimi Servolla, ratkaisu ei ole piilottaa
+                taustalle Chromiumia tai Chromea. Ratkaisu on selvittää, mitä Servosta
+                puuttuu, ja korjata puuttuva osa mahdollisimman yleisesti ja standardien
+                mukaisesti.
+            </p>
+            <p><strong>Periaate:</strong></p>
+            <blockquote>
+                Kela ei toimi → selvitetään puuttuva web-alustan osa →
+                korjataan Servo/Katselin-yhteensopivuus.
+            </blockquote>
+            <p>
+                Ei: <em>Kela ei toimi → käytetään Chromea.</em>
+            </p>
+        </section>
+
+        <section>
+            <h2>Servo on moottori, Katselin on satama</h2>
+            <p>Roolit ovat selkeät:</p>
+            <ul>
+                <li><strong>Servo</strong> on selainmoottori.</li>
+                <li><strong>Katselin</strong> on turvallinen käyttöympäristö.</li>
+                <li><strong>Varustamo</strong> on luotettujen sovellusten jakelupaikka.</li>
+                <li><strong>Telakka</strong> on kehitysmalli, jolla korjataan Servosta puuttuvia osia.</li>
+                <li><strong>Viranomaisväylä</strong> (ei toteuteta) — kuratoitu viranomaispalveluvalikko; whitelist korvaa osittain.</li>
+            </ul>
+            <p>
+                Katselin ei yritä muuttaa Servoa omaksi tuotteekseen eikä forkata sitä
+                pysyvästi erilleen upstreamista. Tavoite on, että Katselin ja Servo
+                tukevat toisiaan, mutta eivät korvaa toisiaan.
+            </p>
+        </section>
+
+        <section>
+            <h2>Whitelist ensin</h2>
+            <p>
+                Katselimessa ei tarvitse aloittaa koko avoimesta webistä. Aluksi
+                määritellään tärkeimmät palvelut, joiden täytyy toimia.
+            </p>
+            <p>Ensimmäinen whitelist voi sisältää esimerkiksi:</p>
+            <ul>
+                <li>Kela</li>
+                <li>Suomi.fi</li>
+                <li>OmaKanta</li>
+                <li>Verohallinto</li>
+                <li>eläke- ja viranomaispalvelut</li>
+                <li>pankkitunnistuksen kannalta välttämättömät sivut</li>
+            </ul>
+            <p>
+                Whitelist ei ole kiertotie Servon ohi. Se on testilista sille, mitä
+                Katselimen pitää osata.
+            </p>
+        </section>
+
+        <section>
+            <h2>Kela on ensisijainen testi</h2>
+            <p>
+                Ikäihmiselle Kela ei ole sivuasia. Se voi olla yksi tärkeimmistä
+                digipalveluista. Siksi Kela.fi ja Kelan asiointi ovat Katselimelle
+                erityisen tärkeitä testikohteita.
+            </p>
+            <p>Portaittaiset Kela-tavoitteet:</p>
+            <table>
+                <thead>
+                    <tr><th>Taso</th><th>Kriteeri</th><th>Merkitys käyttäjälle</th></tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Kela MVP</td>
+                        <td><code>www.kela.fi</code> latautuu, navigaatio ja haku toimivat.</td>
+                        <td>Löytää tiedon turvallisesti satamasta.</td>
+                    </tr>
+                    <tr>
+                        <td>Kela asiointiin</td>
+                        <td><code>asiointi.kela.fi</code> avautuu, tunnistautumisen alkuun pääsee.</td>
+                        <td>Ymmärtää miten asiointi alkaa.</td>
+                    </tr>
+                    <tr>
+                        <td>Kela kirjautunut</td>
+                        <td>FTN-tunnistautuminen onnistuu, viestit ja lomakkeet toimivat.</td>
+                        <td>Voi hoitaa asiansa.</td>
+                    </tr>
+                    <tr>
+                        <td>Kela Ready</td>
+                        <td>PDF:t, liitteet ja pitkät istunnot luotettavasti.</td>
+                        <td>Arjen digipalvelu valmis.</td>
+                    </tr>
+                </tbody>
+            </table>
+            <h3>Whitelist ei tee sivusta toimivaa</h3>
+            <p>
+                <code>kela.fi</code> whitelistissa tarkoittaa, että navigointi sinne on sallittu —
+                ei sitä, että sivu varmasti latautuu tai asiointi onnistuu. Suurin osa työstä
+                tapahtuu Servossa Telakalla, ei Katselimen hakukerroksessa.
+            </p>
+            <h3>Testitasojen realistisuus</h3>
+            <table>
+                <thead>
+                    <tr><th>Testi</th><th>Tavoite</th><th>Realistisuus</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>1. Etusivu</td><td><code>www.kela.fi</code> latautuu</td><td>Kohtuullinen</td></tr>
+                    <tr><td>2. Navigaatio ja haku</td><td>Linkit ja haku toimivat</td><td>Mahdollinen</td></tr>
+                    <tr><td>3. Asiointiin</td><td><code>asiointi.kela.fi</code> avautuu</td><td>Vaikea</td></tr>
+                    <tr><td>4. Tunnistautuminen</td><td>FTN-ketju pankkien kautta</td><td>Erittäin vaikea</td></tr>
+                    <tr><td>5. Lomakkeet ja PDF:t</td><td>Kirjautunut asiointi</td><td>Erittäin vaikea</td></tr>
+                </tbody>
+            </table>
+            <h3>Tunnistautuminen (FTN)</h3>
+            <p>
+                Kela-asiointi käyttää vahvaa tunnistautumista (FTN). Virta kulkee useiden
+                välittäjien kautta. Suljettu satama ja avoin tunnistautumisketju vaativat
+                eksplisiittisen mallin:
+            </p>
+            <ol>
+                <li><strong>Laajennettu whitelist</strong> — FTN-ketjun domainit whitelistataan tarkoituksella.</li>
+                <li><strong>Tilapäinen tunnistuspolku</strong> — auth-vaiheessa rajattu poikkeus satamasta.</li>
+                <li><strong>Erillinen Viranomaisväylä-sovellus</strong> — ei toteutettu; whitelist korvaa osittain.</li>
+            </ol>
+        </section>
+
+        <section>
+            <h2>Ei sivukohtaisia hackeja</h2>
+            <p>
+                Katselin ei lisää Servo-koodiin poikkeuksia kuten
+                <code>if url contains kela.fi</code>. Hyvä korjaus on pieni, testattava,
+                standardin mukainen ja upstreamattavissa Servoon.
+            </p>
+        </section>
+
+        <section>
+            <h2>Upstreamia ei rikota</h2>
+            <p>Katselimen omat osat pidetään erillään Servon koodista.</p>
+            <p>Paikalliset patchit merkitään statuksella:</p>
+            <ul>
+                <li><code>upstreamable</code></li>
+                <li><code>submitted</code></li>
+                <li><code>local-only</code></li>
+                <li><code>remove-when-upstreamed</code></li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Katselin Ready</h2>
+            <p>
+                Selain on Katselin Ready vasta, kun tärkeimmät arjen palvelut toimivat
+                luotettavasti satamassa. Kelan portaittaiset tavoitteet yllä kuvaavat
+                tätä etenemistä — myös Suomi.fi, OmaKanta ja pankkitunnistus kuuluvat
+                samaan kokonaisuuteen.
+            </p>
+        </section>
+
+        <section id="telakka">
+            <h2>Telakka</h2>
+            <p>
+                Telakka on tapa kehittää Katselinta arjen tarpeista käsin. Jokainen
+                Telakka-kierros tuottaa yhden konkreettisen korjauksen Servoon, ei
+                yritystä ratkaista koko sivua kerralla.
+            </p>
+            <ol>
+                <li>Valitaan tärkeä sivu, joka ei toimi.</li>
+                <li>Toistetaan ongelma Servossa.</li>
+                <li>Kirjataan ensimmäinen konkreettinen hajoamiskohta.</li>
+                <li>Selvitetään puuttuva API, standardiominaisuus tai bugi.</li>
+                <li>Tehdään pienin mahdollinen korjaus.</li>
+                <li>Lisätään testi.</li>
+                <li>Ajetaan Katselin-testit.</li>
+                <li>Tarjotaan korjaus upstreamiin.</li>
+                <li>Poistetaan paikallinen patch, kun upstream sisältää korjauksen.</li>
+            </ol>
+            <p>
+                Käytännön Kela-esimerkki:
+                <a href="kehittajille-telakka.html">Telakka — Kela</a>.
+            </p>
+        </section>
+
+        <section>
+            <h2>Avomeri ja Laituri</h2>
+            <p>
+                Satama on kuratoitu ja turvallinen, mutta käyttäjälle jätetään aina
+                mahdollisuus tutkia avointa internetiä. Avomeri on muistiton selaustila:
+                kun se suljetaan, evästeet, välimuisti ja historia poistetaan.
+            </p>
+            <p>
+                Avomeren ja Sataman välissä on <strong>Laituri</strong>: käyttäjän itsensä
+                hyväksymät sivustot. Laituri toimii kokeilu- ja siirtymäalueena niille
+                sivustoille, joita ei ole vielä hyväksytty kuratoituun Satamaan.
+            </p>
+            <blockquote>
+                Satama on koti. Laituri on oma vene. Avomeri on maailma kotisataman ulkopuolella.
+            </blockquote>
+            <p>
+                <a href="filosofia-avomeri.html">Lue täysi Avomeri- ja Laituri-kuvaus</a>.
+            </p>
+        </section>
+
+        <section>
+            <h2>Ydinlause</h2>
+            <blockquote>
+                Servo on moottori. Katselin on satama. Telakka korjaa moottoria, mutta
+                ei muuta sitä satamaksi.
+            </blockquote>
+            <p>
+                Kaikkea nettiä ei tarvitse tehdä helpoksi.<br>
+                Tärkeät asiat pitää tehdä turvallisiksi.
+            </p>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="page">
+            <p class="footer-tagline">Built on Servo. Made in Finland.</p>
+            <div class="footer-row">
+                <span>&copy; 2026 Mikko Huuskonen · <a href="../LICENSE.md">CC BY 4.0</a></span>
+                <span>
+                    <a href="https://github.com/Mikko-Huuskonen-Pro/Katselin.fi" rel="noopener">GitHub</a>
+                    ·
+                    <a href="../sv/filosofi.html" hreflang="sv">På svenska</a>
+                </span>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

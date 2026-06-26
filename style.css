@@ -1,0 +1,646 @@
+/*
+ * Katselin.fi
+ * Yksinkertainen, kevyt ja pitkäikäinen tyylitiedosto.
+ * Ei ulkoisia fontteja, ei kuvia (paitsi semanttiset img-elementit),
+ * ei animaatioita. Suunniteltu mobiili edellä ja luettavaksi
+ * sekä ihmisille että koneille.
+ */
+
+:root {
+    --bg: #000000;
+    --surface: #0a1118;
+    --surface-2: #121b25;
+    --border: #1c2a38;
+    --text: #e8edf2;
+    --text-muted: #98a4b3;
+    --link: #4ea1ff;
+    --link-hover: #7fbcff;
+    --brand: #1a5f9e;
+    --brand-strong: #2a7ac4;
+    --focus: #ffd166;
+    --max-width: 900px;
+    --gutter: 1.25rem;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+    background: var(--bg);
+    color: var(--text);
+    font-size: 17px;
+    line-height: 1.6;
+}
+
+body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+        Oxygen, Ubuntu, Cantarell, "Helvetica Neue", Arial, sans-serif;
+    font-weight: 400;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+::selection {
+    background: var(--brand);
+    color: #ffffff;
+}
+
+:focus-visible {
+    outline: 3px solid var(--focus);
+    outline-offset: 2px;
+    border-radius: 2px;
+}
+
+/* ---------- Yleinen layout ---------- */
+
+.page {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 var(--gutter);
+    width: 100%;
+}
+
+main {
+    flex: 1 0 auto;
+    padding-top: 1rem;
+    padding-bottom: 4rem;
+}
+
+/* ---------- Yläpalkki ---------- */
+
+.site-header {
+    border-bottom: 1px solid var(--border);
+    padding: 1rem 0;
+}
+
+.site-header .page {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.75rem 1.25rem;
+}
+
+.brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    color: var(--text);
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 0.01em;
+    font-size: 1.05rem;
+}
+
+.brand:hover,
+.brand:focus-visible {
+    color: var(--link-hover);
+}
+
+.brand-mark {
+    width: 32px;
+    height: 32px;
+    display: inline-block;
+    flex: 0 0 auto;
+}
+
+.nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.25rem 1.1rem;
+    align-items: center;
+    margin-left: auto;
+}
+
+.nav a {
+    color: var(--text-muted);
+    text-decoration: none;
+    padding: 0.35rem 0;
+    font-size: 0.98rem;
+}
+
+.nav a:hover,
+.nav a:focus-visible {
+    color: var(--text);
+}
+
+.nav a[aria-current="page"] {
+    color: var(--text);
+    border-bottom: 2px solid var(--brand-strong);
+}
+
+.lang {
+    display: inline-flex;
+    gap: 0.4rem;
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    padding-left: 0.75rem;
+    border-left: 1px solid var(--border);
+}
+
+.lang a {
+    color: var(--text-muted);
+    text-decoration: none;
+}
+
+.lang a[aria-current="true"] {
+    color: var(--text);
+    font-weight: 600;
+}
+
+.lang a:hover,
+.lang a:focus-visible {
+    color: var(--text);
+}
+
+/* ---------- Etusivun "hero" ---------- */
+
+.hero {
+    text-align: center;
+    padding: 2.5rem 0 1.5rem;
+}
+
+.hero-logo {
+    display: block;
+    margin: 0 auto 1.25rem;
+    width: 180px;
+    height: auto;
+    max-width: 60%;
+}
+
+.hero h1 {
+    font-size: 2.4rem;
+    margin: 0.25rem 0 0.75rem;
+    letter-spacing: -0.01em;
+}
+
+.hero .tagline {
+    color: var(--text-muted);
+    font-size: 1.15rem;
+    margin: 0 auto 2rem;
+    max-width: 36ch;
+}
+
+.cta {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.75rem;
+    margin-top: 1.5rem;
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.75rem 1.4rem;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    border: 1px solid var(--border);
+    background: var(--surface);
+    color: var(--text);
+    min-width: 10rem;
+    text-align: center;
+}
+
+.btn:hover,
+.btn:focus-visible {
+    background: var(--surface-2);
+    border-color: var(--brand-strong);
+    color: #ffffff;
+}
+
+.btn-primary {
+    background: var(--brand);
+    border-color: var(--brand);
+    color: #ffffff;
+}
+
+.btn-primary:hover,
+.btn-primary:focus-visible {
+    background: var(--brand-strong);
+    border-color: var(--brand-strong);
+}
+
+/* ---------- Tekstiä sisältävät sivut ---------- */
+
+h1,
+h2,
+h3,
+h4 {
+    color: var(--text);
+    line-height: 1.25;
+    font-weight: 700;
+}
+
+h1 {
+    font-size: 2rem;
+    margin-top: 1.5rem;
+}
+
+h2 {
+    font-size: 1.4rem;
+    margin-top: 2.5rem;
+    padding-top: 0.5rem;
+}
+
+h3 {
+    font-size: 1.15rem;
+    margin-top: 2rem;
+}
+
+p {
+    margin: 0 0 1rem;
+}
+
+a {
+    color: var(--link);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    text-decoration-thickness: 1px;
+}
+
+a:hover,
+a:focus-visible {
+    color: var(--link-hover);
+}
+
+ul,
+ol {
+    padding-left: 1.25rem;
+    margin: 0 0 1rem;
+}
+
+li {
+    margin-bottom: 0.35rem;
+}
+
+hr {
+    border: 0;
+    border-top: 1px solid var(--border);
+    margin: 3rem 0;
+}
+
+blockquote {
+    margin: 1.5rem 0;
+    padding: 0.75rem 1rem;
+    border-left: 3px solid var(--brand-strong);
+    background: var(--surface);
+    color: var(--text-muted);
+}
+
+code,
+pre,
+kbd,
+samp {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas,
+        "Liberation Mono", monospace;
+    font-size: 0.95em;
+}
+
+code {
+    background: var(--surface);
+    padding: 0.1em 0.35em;
+    border-radius: 3px;
+    color: #d8e1eb;
+}
+
+pre {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    padding: 1rem;
+    border-radius: 6px;
+    overflow-x: auto;
+    line-height: 1.45;
+}
+
+pre code {
+    background: none;
+    padding: 0;
+}
+
+/* ---------- Kortit ja ruudukot ---------- */
+
+.cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    margin: 1.5rem 0;
+}
+
+.card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 1.25rem;
+}
+
+.card h2,
+.card h3 {
+    margin-top: 0;
+}
+
+.card p:last-child {
+    margin-bottom: 0;
+}
+
+.card a.btn {
+    margin-top: 0.5rem;
+    min-width: auto;
+}
+
+/* ---------- Sanasto-taulukko ---------- */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1.25rem 0 2rem;
+    font-size: 0.97rem;
+}
+
+th,
+td {
+    text-align: left;
+    padding: 0.6rem 0.75rem;
+    border-bottom: 1px solid var(--border);
+    vertical-align: top;
+}
+
+th {
+    color: var(--text);
+    font-weight: 600;
+}
+
+td:first-child {
+    white-space: nowrap;
+    color: var(--text);
+    font-weight: 500;
+}
+
+/* ---------- Alapalkki ---------- */
+
+.site-footer {
+    border-top: 1px solid var(--border);
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    padding: 1.5rem 0 2rem;
+}
+
+.site-footer .page {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.footer-tagline {
+    margin: 0;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+
+.footer-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem 1.5rem;
+    justify-content: space-between;
+}
+
+.site-footer a {
+    color: var(--text-muted);
+}
+
+.site-footer a:hover,
+.site-footer a:focus-visible {
+    color: var(--text);
+}
+
+/* ---------- Dokumentaation sivuvalikko ---------- */
+
+.doc-nav {
+    margin: 0 0 2rem;
+    padding: 1rem 1.25rem;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+}
+
+.doc-nav h2 {
+    margin: 0 0 0.75rem;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.doc-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.doc-nav li {
+    margin-bottom: 0.35rem;
+}
+
+.doc-nav li:last-child {
+    margin-bottom: 0;
+}
+
+.doc-source {
+    margin-top: 2.5rem;
+    padding-top: 1.25rem;
+    border-top: 1px solid var(--border);
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+
+/* ---------- Kielivalinta-etusivu ---------- */
+
+.lang-pick {
+    flex: 1 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 3rem var(--gutter);
+}
+
+.lang-pick .inner {
+    max-width: 32rem;
+}
+
+.lang-pick img {
+    width: 200px;
+    max-width: 60%;
+    height: auto;
+    margin-bottom: 1.5rem;
+}
+
+.lang-pick h1 {
+    font-size: 2.2rem;
+    margin: 0 0 0.5rem;
+}
+
+.lang-pick p {
+    color: var(--text-muted);
+    margin-bottom: 2rem;
+}
+
+.lang-pick .choices {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.75rem;
+}
+
+.lang-pick .choices a {
+    min-width: 9rem;
+}
+
+/* ---------- Hieman leveämmät näytöt ---------- */
+
+@media (min-width: 720px) {
+    .cards {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .hero h1 {
+        font-size: 2.8rem;
+    }
+}
+
+/* ---------- Suuremmat kosketuskohteet pienillä laitteilla ---------- */
+
+@media (max-width: 480px) {
+    .btn {
+        width: 100%;
+    }
+}
+
+/* ---------- Palautelomake ---------- */
+
+.feedback-form {
+    margin: 1.25rem 0 2.5rem;
+    padding: 1.25rem;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+}
+
+.feedback-form label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 0.35rem;
+}
+
+.feedback-form input[type="text"],
+.feedback-form textarea {
+    width: 100%;
+    padding: 0.65rem 0.75rem;
+    font: inherit;
+    color: var(--text);
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    margin-bottom: 0.25rem;
+}
+
+.feedback-form textarea {
+    resize: vertical;
+    min-height: 8rem;
+    line-height: 1.45;
+}
+
+.feedback-form input:focus-visible,
+.feedback-form textarea:focus-visible {
+    border-color: var(--brand-strong);
+    outline: none;
+    box-shadow: 0 0 0 2px var(--brand);
+}
+
+.feedback-form button {
+    cursor: pointer;
+    font: inherit;
+}
+
+.form-note {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+
+.feedback-form .btn + .btn {
+    margin-left: 0.5rem;
+}
+
+@media (max-width: 480px) {
+    .feedback-form .btn + .btn {
+        margin-left: 0;
+        margin-top: 0.5rem;
+    }
+}
+
+/* ---------- Blogi ---------- */
+
+.blog-list {
+    list-style: none;
+    padding: 0;
+    margin: 2rem 0 0;
+}
+
+.blog-item {
+    margin: 0;
+    padding: 1.5rem 0;
+    border-bottom: 1px solid var(--border);
+}
+
+.blog-item:first-child {
+    padding-top: 0;
+}
+
+.blog-item article h2 {
+    margin-top: 0.35rem;
+    font-size: 1.35rem;
+}
+
+.blog-item article h2 a {
+    text-decoration: none;
+    color: var(--text);
+}
+
+.blog-item article h2 a:hover,
+.blog-item article h2 a:focus-visible {
+    color: var(--link);
+    text-decoration: underline;
+}
+
+.blog-meta {
+    margin: 0 0 0.25rem;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+
+.blog-meta a {
+    color: var(--text-muted);
+}
+
+.blog-post .blog-meta {
+    margin-bottom: 0.5rem;
+}
+
+.blog-post h1 {
+    margin-top: 0.5rem;
+}
+
+/* ---------- Vähennetty liike ---------- */
+
+@media (prefers-reduced-motion: reduce) {
+    * {
+        scroll-behavior: auto !important;
+    }
+}

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Osallistuminen | Kehittäjille | Katselin</title>
+    <meta name="description" content="Miten osallistua Katselimen kehitykseen: bugit, Rust-muutokset ja kehitysympäristö.">
+    <meta name="color-scheme" content="dark">
+    <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="canonical" href="https://katselin.fi/fi/kehittajille-osallistuminen.html">
+</head>
+<body>
+    <header class="site-header">
+        <div class="page">
+            <a class="brand" href="./" aria-label="Katselin – etusivu">
+                <img class="brand-mark" src="../assets/favicon.svg" alt="">
+                <span>Katselin</span>
+            </a>
+            <nav class="nav" aria-label="Päävalikko">
+                <a href="./">Katselin</a>
+                <a href="majakka.html">Majakka</a>
+                <a href="blogi/">Blogi</a>
+                <a href="kehittajille.html" aria-current="page">Kehittäjille</a>
+                <a href="filosofia.html">Filosofia</a>
+                <a href="https://github.com/Mikko-Huuskonen-Pro/Katselin.fi" rel="noopener">GitHub</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="page">
+        <h1>Osallistuminen</h1>
+        <p class="tagline">Miten auttaa Katselimen kehityksessä.</p>
+
+        <p>
+            Ennen muutoksia lue selainrepon
+            <a href="https://github.com/Mikko-Huuskonen-Pro/Kotisatama/blob/main/AGENT.md" rel="noopener">AGENT.md</a>:
+            älä muokkaa Servo-upstream-tiedostoja suoraan ilman pakottavaa syytä.
+        </p>
+
+        <nav class="doc-nav" aria-label="Kehittäjädokumentaatio">
+            <h2>Kehittäjille</h2>
+            <ul>
+                <li><a href="kehittajille.html">Yleiskatsaus</a></li>
+                <li><a href="kehittajille-arkkitehtuuri.html">Arkkitehtuuri</a></li>
+                <li><a href="kehittajille-telakka.html">Telakka — Kela</a></li>
+                <li><a href="kehittajille-osallistuminen.html" aria-current="page">Osallistuminen</a></li>
+                <li><a href="kehittajille-tietoturva.html">Tietoturva</a></li>
+            </ul>
+        </nav>
+
+        <section>
+            <h2>Missä voi auttaa</h2>
+            <ul>
+                <li>Bugiilmoitukset — erityisesti whitelist-ohitukset tai hakuindeksin ongelmat (<a href="palaute.html">palautesivu</a>)</li>
+                <li><strong>Crawler-testaus</strong> — Playwright-indeksointi eri sivustoilla</li>
+                <li><strong>Servo-yhteensopivuus</strong> — Telakka-korjaukset (Kela, Suomi.fi, …)</li>
+                <li><strong>Dokumentaatio</strong> — parannukset Katselin.fi-repoon</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Whitelist-ehdotukset</h2>
+            <p>
+                Kuratoidut sivulistat hallinnoidaan yksityisessä repossa. Uusien domainien
+                ehdotukset: ota yhteyttä ylläpitäjään tai avaa keskustelu GitHubissa.
+                Julkiseen selainrepoon ei lisätä tuotantodataa.
+            </p>
+        </section>
+
+        <section>
+            <h2>Rust-muutokset</h2>
+            <p>
+                Kaikki Katselin-spesifinen Rust-koodi kuuluu <code>components/kotisatama/</code>
+                -hakemistoon. Älä muokkaa Servo-upstream-tiedostoja ilman pakottavaa syytä.
+            </p>
+            <p>Whitelist toteutetaan embedder-hookissa (<code>ports/servoshell</code>), ei <code>components/net/</code>-tasolla.</p>
+            <p>Tarkistuslista ennen PR:ää:</p>
+<pre><code>cargo build                          # ilman featurea
+cargo build --features kotisatama    # featurella</code></pre>
+            <p>
+                Tarkemmat säännöt selainrepon
+                <a href="https://github.com/Mikko-Huuskonen-Pro/Kotisatama/blob/main/AGENT.md" rel="noopener">AGENT.md</a>-tiedostossa.
+            </p>
+        </section>
+
+        <section>
+            <h2>Kehitysympäristö</h2>
+            <ol>
+                <li>Asenna <a href="https://book.servo.org/hacking/setting-up-your-environment.html" rel="noopener">Servon kehitysympäristö</a>.</li>
+                <li>Kloonaa ja rakenna:</li>
+            </ol>
+<pre><code>git clone https://github.com/Mikko-Huuskonen-Pro/Kotisatama.git
+cd Kotisatama
+./mach build --release
+./mach run</code></pre>
+            <p>Paikallinen whitelist kehityksessä:</p>
+<pre><code>cp config/whitelist.example.json config/whitelist.json
+export KOTISATAMA_WHITELIST_PATH=config/whitelist.json</code></pre>
+        </section>
+
+        <section>
+            <h2>Bugiilmoitukset</h2>
+            <p>
+                Käytä <a href="palaute.html">palautesivua</a> tai avaa GitHub Issue.
+                Kerro mitä teit, mitä odotit, mitä tapahtui ja käyttöjärjestelmä.
+            </p>
+            <p>Tietoturva-aukoista: <a href="kehittajille-tietoturva.html">tietoturvaohje</a> — ei julkisena issuena.</p>
+        </section>
+
+        <section>
+            <h2>Servo-upstream</h2>
+            <p>
+                Servo-projektin omiin muutoksiin osallistuminen tapahtuu
+                <a href="https://github.com/servo/servo/blob/main/CONTRIBUTING.md" rel="noopener">servo/servo-repon kautta</a>.
+            </p>
+        </section>
+
+        <p class="doc-source">
+            Lähde: <a href="https://github.com/Mikko-Huuskonen-Pro/Katselin.fi/blob/main/docs/developer/osallistuminen.md" rel="noopener">docs/developer/osallistuminen.md</a>
+        </p>
+    </main>
+
+    <footer class="site-footer">
+        <div class="page">
+            <p class="footer-tagline">Built on Servo. Made in Finland.</p>
+            <div class="footer-row">
+                <span>&copy; 2026 Mikko Huuskonen · <a href="../LICENSE.md">CC BY 4.0</a></span>
+                <span><a href="kehittajille.html">← Kehittäjille</a></span>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

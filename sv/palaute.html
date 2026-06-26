@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Feedback och felrapporter | Katselin</title>
+    <meta name="description" content="Rapportera ett fel i Katselin eller skicka feedback. Rapporterna sparas som offentliga GitHub-ärenden.">
+    <meta name="color-scheme" content="dark">
+    <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+    <link rel="alternate" hreflang="fi" href="/fi/palaute.html">
+    <link rel="alternate" hreflang="sv" href="/sv/palaute.html">
+    <link rel="canonical" href="https://katselin.fi/sv/palaute.html">
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="page">
+            <a class="brand" href="./" aria-label="Katselin – startsida">
+                <img class="brand-mark" src="../assets/favicon.svg" alt="">
+                <span>Katselin</span>
+            </a>
+            <nav class="nav" aria-label="Huvudmeny">
+                <a href="./">Katselin</a>
+                <a href="fyren.html">Fyren</a>
+                <a href="blogg/">Blogg</a>
+                <a href="utvecklare.html">Utvecklare</a>
+                <a href="filosofi.html">Filosofi</a>
+                <a href="https://github.com/Mikko-Huuskonen-Pro/Katselin.fi" rel="noopener">GitHub</a>
+                <span class="lang" aria-label="Språk">
+                    <a href="../fi/palaute.html" hreflang="fi">FI</a>
+                    <a href="palaute.html" aria-current="true">SV</a>
+                </span>
+            </nav>
+        </div>
+    </header>
+
+    <main class="page">
+        <h1>Feedback och felrapporter</h1>
+        <p class="tagline">
+            Berätta om ett fel eller föreslå en förbättring. Knappen öppnar GitHub
+            där rapporten sparas i det här repot.
+        </p>
+
+        <section>
+            <h2>Så fungerar det</h2>
+            <ol>
+                <li>Fyll i formuläret nedan.</li>
+                <li>Knappen öppnar GitHub med ett förifyllt ärende.</li>
+                <li>Logga in på GitHub (gratis konto räcker) och bekräfta.</li>
+                <li>Rapporten syns i repots <a href="https://github.com/Mikko-Huuskonen-Pro/Katselin.fi/issues" rel="noopener">Issues</a>.</li>
+            </ol>
+            <p>
+                Webbplatsen använder inga cookies eller spårning. Inget skickas förrän
+                du bekräftar ärendet på GitHub.
+            </p>
+        </section>
+
+        <section>
+            <h2 id="webblasare">Fel i webbläsaren</h2>
+            <p>
+                Krasch, sidor som inte laddas, sökning i Hamnen eller annat programfel.
+            </p>
+            <form class="feedback-form" method="get" action="https://github.com/Mikko-Huuskonen-Pro/Katselin.fi/issues/new" accept-charset="UTF-8">
+                <p>
+                    <label for="selain-title">Rubrik</label>
+                    <input id="selain-title" name="title" type="text" required maxlength="120"
+                        placeholder="[Selain] t.ex. kela.fi laddas inte i Hamnen">
+                </p>
+                <p>
+                    <label for="selain-body">Beskrivning</label>
+                    <textarea id="selain-body" name="body" required rows="14" placeholder="## Vad hände
+
+## Vad du förväntade dig
+
+## Steg för att återskapa
+
+1.
+2.
+
+## Operativsystem
+
+## Katselin-version
+
+## URL eller sökord"></textarea>
+                </p>
+                <p class="form-note">
+                    Skriv inte lösenord, personnummer eller bankuppgifter.
+                </p>
+                <p>
+                    <button type="submit" class="btn btn-primary">Fortsätt till GitHub — webbläsarfel</button>
+                </p>
+            </form>
+        </section>
+
+        <section>
+            <h2 id="feedback">Feedback och förslag</h2>
+            <form class="feedback-form" method="get" action="https://github.com/Mikko-Huuskonen-Pro/Katselin.fi/issues/new" accept-charset="UTF-8">
+                <p>
+                    <label for="palaute-title">Rubrik</label>
+                    <input id="palaute-title" name="title" type="text" required maxlength="120">
+                </p>
+                <p>
+                    <label for="palaute-body">Feedback</label>
+                    <textarea id="palaute-body" name="body" required rows="8"></textarea>
+                </p>
+                <p>
+                    <button type="submit" class="btn btn-primary">Fortsätt till GitHub — feedback</button>
+                </p>
+            </form>
+        </section>
+
+        <section>
+            <h2 id="webbplats">Webbplats eller dokumentation</h2>
+            <form class="feedback-form" method="get" action="https://github.com/Mikko-Huuskonen-Pro/Katselin.fi/issues/new" accept-charset="UTF-8">
+                <p>
+                    <label for="sivusto-title">Rubrik</label>
+                    <input id="sivusto-title" name="title" type="text" required maxlength="120">
+                </p>
+                <p>
+                    <label for="sivusto-body">Beskrivning</label>
+                    <textarea id="sivusto-body" name="body" required rows="8"></textarea>
+                </p>
+                <p>
+                    <button type="submit" class="btn btn-primary">Fortsätt till GitHub — webbplats</button>
+                </p>
+            </form>
+        </section>
+
+        <section>
+            <h2>Säkerhet och integritet</h2>
+            <p>
+                Sårbarheter rapporteras inte som offentliga ärenden —
+                <a href="../fi/kehittajille-tietoturva.html">säkerhetsanvisning</a> (på finska).
+            </p>
+            <p>
+                Formuläret samlar inga uppgifter själv. När du bekräftar på GitHub blir
+                ärendet <strong>offentligt</strong>. Skriv inte personuppgifter du inte vill
+                publicera. GitHub behandlar data i USA —
+                <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" rel="noopener">integritetspolicy</a>.
+            </p>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="page">
+            <p class="footer-tagline">Built on Servo. Made in Finland.</p>
+            <div class="footer-row">
+                <span>&copy; 2026 Mikko Huuskonen · <a href="../LICENSE.md">CC BY 4.0</a></span>
+                <span>
+                    <a href="fyren.html">Fyren</a>
+                    ·
+                    <a href="../fi/palaute.html" hreflang="fi">Suomeksi</a>
+                </span>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Satama toimii — Avomeri odottaa | Kehitysblogi | Katselin</title>
+    <meta name="description" content="Katselimen Satama ja whitelist-haku toimivat. Avomeri on erillinen työ, jota ei rikota Sataman reititystä korjaamalla.">
+    <meta name="color-scheme" content="dark">
+    <link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="../../style.css">
+    <link rel="canonical" href="https://katselin.fi/fi/blogi/2026-06-24-satama-toimii.html">
+</head>
+<body>
+    <header class="site-header">
+        <div class="page">
+            <a class="brand" href="../" aria-label="Katselin – etusivu">
+                <img class="brand-mark" src="../../assets/favicon.svg" alt="">
+                <span>Katselin</span>
+            </a>
+            <nav class="nav" aria-label="Päävalikko">
+                <a href="../">Katselin</a>
+                <a href="../majakka.html">Majakka</a>
+                <a href="./" aria-current="page">Blogi</a>
+                <a href="../kehittajille.html">Kehittäjille</a>
+                <a href="../filosofia.html">Filosofia</a>
+                <a href="https://github.com/Mikko-Huuskonen-Pro/Katselin.fi" rel="noopener">GitHub</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="page blog-post">
+        <p class="blog-meta"><a href="./">← Blogi</a> · <time datetime="2026-06-24">24.6.2026</time></p>
+        <h1>Satama toimii — Avomeri odottaa</h1>
+
+        <p>
+            Katselimen tärkein lupaus on yksinkertainen: tärkeät palvelut löytyvät
+            turvallisesti Satamasta. Tämä polku toimii nyt käytännössä.
+        </p>
+
+        <h2>Whitelist-haku on pääreitti</h2>
+        <p>
+            Kun kirjoitat osoitekenttään <code>kela</code>, <code>kela.fi</code>,
+            <code>suomi</code> tai <code>suomi.fi</code>, pääset oikealle sivulle.
+            Tätä ei tarkoituksella rikota tulevissa muutoksissa — noin 90&nbsp;% arjen
+            selailusta on tarkoitus tapahtua whitelistin kautta.
+        </p>
+
+        <h2>Avomeri erikseen</h2>
+        <p>
+            Avomeri on konseptiltaan tärkeä, mutta teknisesti keskeneräinen. Startpage-polku,
+            uuden välilehden haku ja fallback-logiikka kaipaavat vielä työtä. Korjaus
+            tehdään erillisenä kokonaisuutena, jotta Sataman reititys pysyy luotettavana.
+        </p>
+
+        <h2>Telakka etenee sivu kerrallaan</h2>
+        <p>
+            Servo-moottorin yhteensopivuus parantuu Telakka-työnkululla. Kela on ensimmäinen
+            testikohde — ei sivukohtaisia hackeja, vaan pieniä upstreamattavia korjauksia.
+            Lue lisää <a href="../filosofia.html#telakka">filosofiasta</a> ja
+            <a href="../kehittajille-telakka.html">Telakka — Kela</a> -ohjeesta.
+        </p>
+
+        <p>
+            Täydellinen tilannekuva:
+            <a href="../nykytila.html">Nykytila 24.6.2026</a>.
+        </p>
+    </main>
+
+    <footer class="site-footer">
+        <div class="page">
+            <p class="footer-tagline">Built on Servo. Made in Finland.</p>
+            <div class="footer-row">
+                <span>&copy; 2026 Mikko Huuskonen · <a href="../../LICENSE.md">CC BY 4.0</a></span>
+                <span><a href="./">← Blogi</a></span>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

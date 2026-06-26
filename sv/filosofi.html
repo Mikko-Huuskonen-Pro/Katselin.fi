@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Filosofi | Katselin</title>
+    <meta name="description" content="Katselins filosofi: Servo är motorn, Katselin är hamnen. Hela nätet behöver inte göras enkelt – de viktiga sakerna ska göras trygga.">
+    <meta name="color-scheme" content="dark">
+    <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+    <link rel="alternate icon" href="../assets/logo.png" type="image/png">
+    <link rel="apple-touch-icon" href="../assets/logo.png">
+    <link rel="alternate" hreflang="fi" href="/fi/filosofia.html">
+    <link rel="alternate" hreflang="sv" href="/sv/filosofi.html">
+    <link rel="canonical" href="https://katselin.fi/sv/filosofi.html">
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="page">
+            <a class="brand" href="./" aria-label="Katselin – startsida">
+                <img class="brand-mark" src="../assets/favicon.svg" alt="">
+                <span>Katselin</span>
+            </a>
+            <nav class="nav" aria-label="Huvudmeny">
+                <a href="./">Katselin</a>
+                <a href="fyren.html">Fyren</a>
+                <a href="blogg/">Blogg</a>
+                <a href="utvecklare.html">Utvecklare</a>
+                <a href="filosofi.html" aria-current="page">Filosofi</a>
+                <a href="https://github.com/Mikko-Huuskonen-Pro/Katselin.fi" rel="noopener">GitHub</a>
+                <span class="lang" aria-label="Språk">
+                    <a href="../fi/filosofia.html" hreflang="fi">FI</a>
+                    <a href="filosofi.html" aria-current="true">SV</a>
+                </span>
+            </nav>
+        </div>
+    </header>
+
+    <main class="page">
+        <h1>Filosofi</h1>
+        <p class="tagline">Varför Katselin finns.</p>
+
+        <section>
+            <h2>Grundtanken</h2>
+            <p>
+                Katselin är inte bara ett gränssnitt ovanpå en webbläsare. Katselin är
+                en trygg vardagsmiljö där viktiga digitala tjänster görs begripliga,
+                avgränsade och tillförlitliga.
+            </p>
+            <blockquote>
+                Målet är inte att göra hela internet enkelt.
+                Målet är att göra det viktiga tryggt.
+            </blockquote>
+        </section>
+
+        <section>
+            <h2>Inga Google-beroenden</h2>
+            <p>
+                Om en viktig sida inte fungerar i Servo är lösningen inte att gömma
+                Chromium eller Chrome under huven. Lösningen är att ta reda på vad
+                som saknas i Servo och åtgärda det så generellt och standardenligt
+                som möjligt.
+            </p>
+            <p><strong>Princip:</strong></p>
+            <blockquote>
+                FPA fungerar inte → vi tar reda på vad som saknas i webbplattformen →
+                vi fixar Servo/Katselin-kompatibiliteten.
+            </blockquote>
+            <p>
+                Inte: <em>FPA fungerar inte → vi använder Chrome.</em>
+            </p>
+        </section>
+
+        <section>
+            <h2>Servo är motorn, Katselin är hamnen</h2>
+            <p>Rollerna är tydliga:</p>
+            <ul>
+                <li><strong>Servo</strong> är webbläsarmotorn.</li>
+                <li><strong>Katselin</strong> är den trygga användarmiljön.</li>
+                <li><strong>Varustamo</strong> är distributionsplatsen för betrodda program.</li>
+                <li><strong>Varvet</strong> är utvecklingsmodellen som lagar Servos luckor.</li>
+            </ul>
+            <p>
+                Katselin försöker inte göra Servo till sin egen produkt och inte heller
+                forka projektet bort från upstream för gott. Målet är att Katselin och
+                Servo ska stödja varandra, inte ersätta varandra.
+            </p>
+        </section>
+
+        <section>
+            <h2>Vitlistan först</h2>
+            <p>
+                I Katselin behöver man inte börja med hela det öppna nätet. Först
+                definieras de viktigaste tjänsterna som måste fungera.
+            </p>
+            <p>Den första vitlistan kan till exempel omfatta:</p>
+            <ul>
+                <li>FPA (Kela)</li>
+                <li>Suomi.fi</li>
+                <li>OmaKanta</li>
+                <li>Skatteförvaltningen</li>
+                <li>pensions- och myndighetstjänster</li>
+                <li>sidor som behövs för bankidentifiering</li>
+            </ul>
+            <p>
+                Vitlistan är ingen genväg förbi Servo. Det är en testlista över vad
+                Katselin ska kunna.
+            </p>
+        </section>
+
+        <section>
+            <h2>FPA är det primära testet</h2>
+            <p>
+                För en äldre person är FPA ingen sidofråga. Det kan vara en av de
+                viktigaste digitala tjänsterna. Därför är Kela.fi och FPA:s e-tjänster
+                särskilt viktiga testmål för Katselin.
+            </p>
+            <p>FPA-mål steg för steg:</p>
+            <table>
+                <thead>
+                    <tr><th>Nivå</th><th>Kriterium</th><th>Betydelse för användaren</th></tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>FPA MVP</td>
+                        <td><code>www.kela.fi</code> laddas, navigation och sökning fungerar.</td>
+                        <td>Hittar information tryggt i hamnen.</td>
+                    </tr>
+                    <tr>
+                        <td>FPA till e-tjänster</td>
+                        <td><code>asiointi.kela.fi</code> öppnas, man kommer till början av inloggningen.</td>
+                        <td>Förstår hur ärendet börjar.</td>
+                    </tr>
+                    <tr>
+                        <td>FPA inloggad</td>
+                        <td>FTN-identifiering fungerar, meddelanden och blanketter fungerar.</td>
+                        <td>Kan sköta sina ärenden.</td>
+                    </tr>
+                    <tr>
+                        <td>FPA Ready</td>
+                        <td>PDF:er, bilagor och långa sessioner tillförlitligt.</td>
+                        <td>Vardagens digitala tjänst är klar.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section id="varvet">
+            <h2>Varvet</h2>
+            <p>
+                Varvet (Telakka) är sättet att utveckla Katselin utifrån vardagens
+                behov. Varje varv-runda producerar en konkret fix till Servo, inte
+                ett försök att lösa hela sidan på en gång.
+            </p>
+            <ol>
+                <li>Välj en viktig sida som inte fungerar.</li>
+                <li>Reproducera problemet i Servo.</li>
+                <li>Anteckna det första konkreta avbrottet.</li>
+                <li>Ta reda på det saknade API:t, standardfunktionen eller buggen.</li>
+                <li>Gör den minsta möjliga rättningen.</li>
+                <li>Lägg till ett test.</li>
+                <li>Kör Katselin-testerna.</li>
+                <li>Föreslå rättningen för upstream.</li>
+                <li>Ta bort den lokala patchen när upstream innehåller fixen.</li>
+            </ol>
+        </section>
+
+        <section>
+            <h2>Öppna havet och Bryggan</h2>
+            <p>
+                Hamnen är kurerad och trygg, men användaren får alltid möjlighet att
+                utforska det öppna nätet. Öppna havet är ett surfläge utan minne:
+                när det stängs raderas kakor, cache och historik.
+            </p>
+            <p>
+                Mellan Öppna havet och Hamnen finns <strong>Bryggan</strong>: webbplatser
+                som användaren själv har godkänt. Bryggan fungerar som en
+                övergångszon för webbplatser som inte ännu har tagits in i den
+                kurerade Hamnen.
+            </p>
+            <blockquote>
+                Hamnen är hemmet. Bryggan är den egna båten. Öppna havet är världen
+                utanför hemmahamnen.
+            </blockquote>
+        </section>
+
+        <section>
+            <h2>Kärnsatsen</h2>
+            <blockquote>
+                Servo är motorn. Katselin är hamnen. Varvet lagar motorn, men gör den
+                inte till en hamn.
+            </blockquote>
+            <p>
+                Hela nätet behöver inte göras enkelt.<br>
+                De viktiga sakerna ska göras trygga.
+            </p>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="page">
+            <p class="footer-tagline">Built on Servo. Made in Finland.</p>
+            <div class="footer-row">
+                <span>&copy; 2026 Mikko Huuskonen · <a href="../LICENSE.md">CC BY 4.0</a></span>
+                <span>
+                    <a href="https://github.com/Mikko-Huuskonen-Pro/Katselin.fi" rel="noopener">GitHub</a>
+                    ·
+                    <a href="../fi/filosofia.html" hreflang="fi">Suomeksi</a>
+                </span>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

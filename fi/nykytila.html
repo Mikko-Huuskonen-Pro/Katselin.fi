@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Nykytila | Katselin</title>
+    <meta name="description" content="Katselimen nykytila kesäkuu 2026: mikä toimii, mikä ei, ja mitä seuraavaksi rakennetaan.">
+    <meta name="color-scheme" content="dark">
+    <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="canonical" href="https://katselin.fi/fi/nykytila.html">
+</head>
+<body>
+    <header class="site-header">
+        <div class="page">
+            <a class="brand" href="./" aria-label="Katselin – etusivu">
+                <img class="brand-mark" src="../assets/favicon.svg" alt="">
+                <span>Katselin</span>
+            </a>
+            <nav class="nav" aria-label="Päävalikko">
+                <a href="./">Katselin</a>
+                <a href="majakka.html">Majakka</a>
+                <a href="blogi/">Blogi</a>
+                <a href="kehittajille.html">Kehittäjille</a>
+                <a href="filosofia.html">Filosofia</a>
+                <a href="https://github.com/Mikko-Huuskonen-Pro/Katselin.fi" rel="noopener">GitHub</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="page">
+        <h1>Nykytila</h1>
+        <p class="tagline">Kirjaus 24.6.2026 — mitä toimii nyt ja mitä ei.</p>
+
+        <section>
+            <h2>Toimii nyt</h2>
+            <p>
+                Whitelist-pohjainen selailu on Katselimen tärkein käyttötapa ja se toimii
+                halutulla tavalla. Osoitekentän haku ohjaa oikein esimerkiksi:
+            </p>
+            <ul>
+                <li><code>kela</code> ja <code>kela.fi</code> → Kela</li>
+                <li><code>suomi</code> ja <code>suomi.fi</code> → Suomi.fi</li>
+            </ul>
+            <p>
+                Tätä reittiä ei rikota tulevissa muutoksissa. Satama on oletus ja turvallinen
+                pääreitti — tavoitteena on, että noin 90&nbsp;% arjen selailusta tapahtuu
+                whitelistin kautta.
+            </p>
+            <p>
+                Selain käynnistyy osoitteeseen <a href="https://katselin.fi/fi/">katselin.fi</a>,
+                kun domain on julkaistu.
+            </p>
+        </section>
+
+        <section>
+            <h2>Ei vielä valmista</h2>
+            <p>Avomeri on konseptina tärkeä, mutta se ei toimi vielä luotettavasti:</p>
+            <ul>
+                <li>Startpage-sivut eivät avaudu odotetusti.</li>
+                <li>Uuden välilehden <em>Hae avomereltä</em> -polku ei hae kunnolla.</li>
+                <li>Avomeri ei toimi fallbackina, jos Sataman haku ei löydä vastausta.</li>
+            </ul>
+            <blockquote>
+                Avomeren korjaus tehdään erillisenä työnä. Sataman whitelist-reititys
+                (<code>kela</code>, <code>suomi.fi</code> jne.) säilytetään ehjänä.
+            </blockquote>
+            <p>
+                Lue <a href="filosofia-avomeri.html">Avomeri-konsepti</a> ja
+                <a href="filosofia.html#telakka">Telakka-työnkulku</a> — Servo-yhteensopivuus
+                paranee sivu kerrallaan (Kela on ensimmäinen testikohde).
+            </p>
+        </section>
+
+        <section>
+            <h2>Kehityksen painopiste</h2>
+            <p>Katselin on aktiivisessa kehityksessä. Seuraavat asiat ovat käynnissä:</p>
+            <ul>
+                <li>Servo-moottorin yhteensopivuus tärkeille sivuille Telakka-kierroksilla.</li>
+                <li>Julkinen beta Windowsille ja Androidille — tulossa.</li>
+                <li>Avomeren erillinen selaustila — arkkitehtuuripäätös ennen toteutusta.</li>
+            </ul>
+        </section>
+
+        <p class="doc-source">
+            Lähde: <a href="https://github.com/Mikko-Huuskonen-Pro/Katselin.fi/blob/main/docs/architecture/nykytila-2026-06-24.md" rel="noopener">docs/architecture/nykytila-2026-06-24.md</a>
+            · <a href="../sv/nykytila.html" hreflang="sv">På svenska</a>
+        </p>
+    </main>
+
+    <footer class="site-footer">
+        <div class="page">
+            <p class="footer-tagline">Built on Servo. Made in Finland.</p>
+            <div class="footer-row">
+                <span>&copy; 2026 Mikko Huuskonen · <a href="../LICENSE.md">CC BY 4.0</a></span>
+                <span><a href="./">← Etusivu</a></span>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

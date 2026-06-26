@@ -1,0 +1,29 @@
+name: Palaute ja ehdotus
+description: Ideat, parannusehdotukset ja yleinen palaute Katselimesta
+title: "[Palaute] "
+labels:
+  - palaute
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Kerro lyhyesti ajatuksesi. Älä sisällytä arkaluonteisia henkilötietoja.
+  - type: textarea
+    id: feedback
+    attributes:
+      label: Palaute tai ehdotus
+    validations:
+      required: true
+  - type: dropdown
+    id: area
+    attributes:
+      label: Aihe
+      options:
+        - Satama ja haku
+        - Avomeri
+        - Laituri
+        - Varustamo
+        - Käyttöliittymä
+        - Muu
+    validations:
+      required: true

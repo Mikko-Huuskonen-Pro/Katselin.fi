@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Utvecklare | Katselin</title>
+    <meta name="description" content="Utvecklarsidan för Katselin: arkitektur, program i Varustamo, Varvet-arbetsflödet och repon.">
+    <meta name="color-scheme" content="dark">
+    <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+    <link rel="alternate icon" href="../assets/logo.png" type="image/png">
+    <link rel="apple-touch-icon" href="../assets/logo.png">
+    <link rel="alternate" hreflang="fi" href="/fi/kehittajille.html">
+    <link rel="alternate" hreflang="sv" href="/sv/utvecklare.html">
+    <link rel="canonical" href="https://katselin.fi/sv/utvecklare.html">
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="page">
+            <a class="brand" href="./" aria-label="Katselin – startsida">
+                <img class="brand-mark" src="../assets/favicon.svg" alt="">
+                <span>Katselin</span>
+            </a>
+            <nav class="nav" aria-label="Huvudmeny">
+                <a href="./">Katselin</a>
+                <a href="fyren.html">Fyren</a>
+                <a href="blogg/">Blogg</a>
+                <a href="utvecklare.html" aria-current="page">Utvecklare</a>
+                <a href="filosofi.html">Filosofi</a>
+                <a href="https://github.com/Mikko-Huuskonen-Pro/Katselin.fi" rel="noopener">GitHub</a>
+                <span class="lang" aria-label="Språk">
+                    <a href="../fi/kehittajille.html" hreflang="fi">FI</a>
+                    <a href="utvecklare.html" aria-current="true">SV</a>
+                </span>
+            </nav>
+        </div>
+    </header>
+
+    <main class="page">
+        <h1>Utvecklare</h1>
+        <p class="tagline">
+            Katselin är ett öppet projekt. Den här sidan riktar sig till alla som vill
+            förstå webbläsarens struktur eller bygga program till Varustamo.
+        </p>
+
+        <section>
+            <h2>Repositorier</h2>
+            <div class="cards">
+                <article class="card">
+                    <h3>Katselin (webbläsaren)</h3>
+                    <p>
+                        Servo-baserad webbläsarmotor, vitlistlogik för Hamnen, lokal
+                        sökning och servoshell-embedder. Publiceras under MPL 2.0.
+                    </p>
+                    <p>
+                        <a class="btn" href="https://github.com/Mikko-Huuskonen-Pro/Kotisatama" rel="noopener">Källkod på GitHub</a>
+                    </p>
+                </article>
+                <article class="card">
+                    <h3>Katselin.fi (den här webbplatsen)</h3>
+                    <p>
+                        Den officiella publika anvisningarna, dokumentationen och
+                        filosofin. Statisk webbplats utan byggsteg. CC BY 4.0.
+                    </p>
+                    <p>
+                        <a class="btn" href="https://github.com/Mikko-Huuskonen-Pro/Katselin.fi" rel="noopener">Repo på GitHub</a>
+                    </p>
+                </article>
+                <article class="card">
+                    <h3>Katselin Private</h3>
+                    <p>
+                        Vitlistor, signerad Varustamo-katalog och intern programutveckling
+                        (Pulloposti, Var är jag). Privat repo.
+                    </p>
+                </article>
+                <article class="card">
+                    <h3>Varustamo</h3>
+                    <p>
+                        Testområde för program, oberoende av Katselins tunga build.
+                        Just nu en del av Katselin Private; tanken är att avskilja den senare.
+                    </p>
+                </article>
+            </div>
+        </section>
+
+        <section>
+            <h2>Översikt av arkitekturen</h2>
+<pre><code>[Katselin – Servo-fork]
+    ├── components/kotisatama/whitelist   ← vitlistlogik
+    ├── components/kotisatama/search      ← sök-API (Meilisearch-klient)
+    └── ports/servoshell                  ← embedder-hook (navigation, UI)
+
+[Android – servoshell EGL]
+    └── support/android/apk + JNI-host    ← Servos egen Android-väg
+
+[Administrationspanel – Tauri 2.0, valfri]
+    └── Anhörig administrerar vitlistan   ← inte en webbläsarmotor
+
+[CDN – statiskt]
+    ├── /free/whitelist.json
+    └── /pro/whitelist.json               ← API-nyckel krävs
+
+[Crawler – CI-process]
+    └── Playwright → Meilisearch-dump → CDN</code></pre>
+            <p>
+                Ingen egen server. Ingen VPN-infrastruktur. Sökningen sker mot ett
+                Meilisearch-index som förladdats på enheten.
+            </p>
+        </section>
+
+        <section>
+            <h2>Programutveckling till Varustamo</h2>
+            <p>
+                Varustamo är lagret för betrodda program. Ett program är vanligen en
+                Tauri 2.0-app som tillhandahåller ett lokalt HTTP-API och som Katselin
+                öppnar i Hamnen som en egen vy.
+            </p>
+            <p>De första programmen i Varustamo:</p>
+            <ul>
+                <li><strong>Pulloposti</strong> – krypterad offline/BLE-kommunikation i närverk och via Bluetooth.</li>
+                <li><strong>Var är jag</strong> (Missä olen) – ett enknappsprogram som berättar nuvarande plats på klarspråk.</li>
+            </ul>
+            <p>
+                Programmen kan utvecklas självständigt utan Katselins fullständiga
+                Servo-build. Officiella installationsfiler signeras och distribueras
+                via Varustamo.
+            </p>
+        </section>
+
+        <section>
+            <h2>Nuläge</h2>
+            <p>
+                Vitlistebaserad surfning fungerar (<code>kela</code>, <code>suomi.fi</code> m.fl.).
+                Öppna havet är ännu ofärdigt.
+            </p>
+            <p><a href="nykytila.html">Läs detaljerad status</a></p>
+        </section>
+
+        <section>
+            <h2>Varvet-arbetsflödet</h2>
+            <p>
+                Varvet är Katselins sätt att laga det som saknas i Servo. Principen är
+                att vi inte gör knep i stil med <code>if url contains kela.fi</code>,
+                utan löser varje observerat problem som en liten och generell
+                Servo-fix.
+            </p>
+            <ol>
+                <li>Välj en viktig sida som inte fungerar.</li>
+                <li>Reproducera problemet i Servo.</li>
+                <li>Anteckna det första konkreta avbrottet (URL, konsolfel, saknat API).</li>
+                <li>Gör den minsta möjliga rättningen.</li>
+                <li>Lägg till ett test.</li>
+                <li>Föreslå rättningen för upstream Servo.</li>
+                <li>Ta bort den lokala patchen när upstream accepterar fixen.</li>
+            </ol>
+            <p>
+                Rättningar märks med status: <code>upstreamable</code>,
+                <code>submitted</code>, <code>local-only</code> eller
+                <code>remove-when-upstreamed</code>.
+            </p>
+        </section>
+
+        <section>
+            <h2>Kom igång</h2>
+            <p>
+                Sätt först upp
+                <a href="https://book.servo.org/hacking/setting-up-your-environment.html" rel="noopener">Servos utvecklingsmiljö</a>.
+                Klona sedan Katselin-repot och kör:
+            </p>
+<pre><code>git clone https://github.com/Mikko-Huuskonen-Pro/Kotisatama.git
+cd Kotisatama
+./mach build --release
+./mach run</code></pre>
+            <p>
+                Mer detaljerade anvisningar, inklusive Android-build och lokal
+                vitlistkonfiguration, finns i repots
+                <a href="https://github.com/Mikko-Huuskonen-Pro/Kotisatama/blob/main/README.md" rel="noopener">README-fil</a>.
+            </p>
+        </section>
+
+        <section>
+            <h2>Licenser</h2>
+            <ul>
+                <li>Servo-koden och Katselins ändringar i Servo: <a href="https://www.mozilla.org/en-US/MPL/2.0/" rel="noopener">MPL 2.0</a>.</li>
+                <li>Den här dokumentationen (Katselin.fi): <a href="../LICENSE.md">CC BY 4.0</a>.</li>
+                <li>Vitlistdata och signerad distribution via Varustamo: hanteras i ett separat privat repo.</li>
+            </ul>
+            <p>
+                Utökad utvecklardokumentation finns på finska:
+                <a href="../fi/kehittajille.html" hreflang="fi">fi/kehittajille</a>
+                och i <a href="https://github.com/Mikko-Huuskonen-Pro/Katselin.fi/tree/main/docs" rel="noopener">docs/</a>.
+            </p>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="page">
+            <p class="footer-tagline">Built on Servo. Made in Finland.</p>
+            <div class="footer-row">
+                <span>&copy; 2026 Mikko Huuskonen · <a href="../LICENSE.md">CC BY 4.0</a></span>
+                <span>
+                    <a href="https://github.com/Mikko-Huuskonen-Pro/Katselin.fi" rel="noopener">GitHub</a>
+                    ·
+                    <a href="../fi/kehittajille.html" hreflang="fi">Suomeksi</a>
+                </span>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

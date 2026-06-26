@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Palaute ja vikailmoitukset | Katselin</title>
+    <meta name="description" content="Ilmoita Katselimen virheestä tai lähetä palautetta. Ilmoitukset tallentuvat julkiseen GitHub-issueen.">
+    <meta name="color-scheme" content="dark">
+    <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+    <link rel="alternate" hreflang="fi" href="/fi/palaute.html">
+    <link rel="alternate" hreflang="sv" href="/sv/palaute.html">
+    <link rel="canonical" href="https://katselin.fi/fi/palaute.html">
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="page">
+            <a class="brand" href="./" aria-label="Katselin – etusivu">
+                <img class="brand-mark" src="../assets/favicon.svg" alt="">
+                <span>Katselin</span>
+            </a>
+            <nav class="nav" aria-label="Päävalikko">
+                <a href="./">Katselin</a>
+                <a href="majakka.html">Majakka</a>
+                <a href="blogi/">Blogi</a>
+                <a href="kehittajille.html">Kehittäjille</a>
+                <a href="filosofia.html">Filosofia</a>
+                <a href="https://github.com/Mikko-Huuskonen-Pro/Katselin.fi" rel="noopener">GitHub</a>
+                <span class="lang" aria-label="Kieli">
+                    <a href="palaute.html" aria-current="true">FI</a>
+                    <a href="../sv/palaute.html" hreflang="sv">SV</a>
+                </span>
+            </nav>
+        </div>
+    </header>
+
+    <main class="page">
+        <h1>Palaute ja vikailmoitukset</h1>
+        <p class="tagline">
+            Kerro virheestä tai ehdota parannusta. Lähetys avaa GitHubin, jossa
+            ilmoitus tallentuu tähän repoon.
+        </p>
+
+        <section>
+            <h2>Lokikirja selaimessa</h2>
+            <p>
+                Katselimen työkalupalkin <strong>Lokikirja</strong>-painike lähettää samanlaiset
+                ilmoitukset automaattisesti GitHub-issueihin — ilman että käyttäjä kirjautuu
+                GitHubiin. Ylläpitäjä konfiguroi teknisen yhteyden (token tai worker);
+                <a href="kehittajille.html#lokikirja">ohje kehittäjille</a>.
+            </p>
+        </section>
+
+        <section>
+            <h2>Miten tämä toimii</h2>
+            <ol>
+                <li>Täytä alla oleva lomake.</li>
+                <li>Painike avaa GitHubin esitäytettynä issue-luontisivuna.</li>
+                <li>Kirjaudu GitHubiin (ilmainen tili riittää) ja vahvista lähetys.</li>
+                <li>Ilmoitus näkyy repossa <a href="https://github.com/Mikko-Huuskonen-Pro/Katselin.fi/issues" rel="noopener">Issues</a>-listassa.</li>
+            </ol>
+            <p>
+                Sivustolla ei ole evästeitä eikä seurantaa. Lomake ei lähetä mitään
+                ennen kuin vahvistat issuen GitHubissa.
+            </p>
+        </section>
+
+        <section>
+            <h2 id="selain">Selainvikailmoitus</h2>
+            <p>
+                Katselin-selaimen kaatuminen, sivun latautumisen epäonnistuminen,
+                Sataman haku tai muu ohjelmavirhe.
+            </p>
+            <form class="feedback-form" method="get" action="https://github.com/Mikko-Huuskonen-Pro/Katselin.fi/issues/new" accept-charset="UTF-8">
+                <p>
+                    <label for="selain-title">Otsikko</label>
+                    <input id="selain-title" name="title" type="text" required maxlength="120"
+                        placeholder="[Selain] esim. kela.fi ei lataudu Satamassa">
+                </p>
+                <p>
+                    <label for="selain-body">Kuvaus</label>
+                    <textarea id="selain-body" name="body" required rows="14" placeholder="## Mitä tapahtui
+
+(kuvaile lyhyesti)
+
+## Mitä odotit
+
+## Toistoaskeleet
+
+1.
+2.
+
+## Käyttöjärjestelmä
+
+(esim. Windows 11)
+
+## Katselin-versio
+
+(jos tiedossa)
+
+## URL tai hakusana
+
+(esim. kela.fi)"></textarea>
+                </p>
+                <p class="form-note">
+                    Älä kirjoita salasanoja, henkilötunnuksia tai pankkitietoja.
+                </p>
+                <p>
+                    <button type="submit" class="btn btn-primary">Jatka GitHubiin — selainvika</button>
+                    <a class="btn" href="https://github.com/Mikko-Huuskonen-Pro/Katselin.fi/issues/new?template=vikailmoitus-selain.yml" rel="noopener">Tai GitHub-pohja</a>
+                </p>
+            </form>
+        </section>
+
+        <section>
+            <h2 id="palaute">Palaute ja ehdotus</h2>
+            <p>Ideat tuotteesta: Satama, Avomeri, Laituri, käyttöliittymä tai muu.</p>
+            <form class="feedback-form" method="get" action="https://github.com/Mikko-Huuskonen-Pro/Katselin.fi/issues/new" accept-charset="UTF-8">
+                <p>
+                    <label for="palaute-title">Otsikko</label>
+                    <input id="palaute-title" name="title" type="text" required maxlength="120"
+                        placeholder="[Palaute] esim. Laiturin sivujen järjestys">
+                </p>
+                <p>
+                    <label for="palaute-body">Palaute</label>
+                    <textarea id="palaute-body" name="body" required rows="8" placeholder="## Palaute tai ehdotus
+
+## Aihe
+
+(esim. Satama ja haku)"></textarea>
+                </p>
+                <p>
+                    <button type="submit" class="btn btn-primary">Jatka GitHubiin — palaute</button>
+                    <a class="btn" href="https://github.com/Mikko-Huuskonen-Pro/Katselin.fi/issues/new?template=palaute.yml" rel="noopener">Tai GitHub-pohja</a>
+                </p>
+            </form>
+        </section>
+
+        <section>
+            <h2 id="sivusto">Sivusto tai dokumentaatio</h2>
+            <p>Virhe tai puute katselin.fi-sivuilla tai docs/-dokumentaatiossa.</p>
+            <form class="feedback-form" method="get" action="https://github.com/Mikko-Huuskonen-Pro/Katselin.fi/issues/new" accept-charset="UTF-8">
+                <p>
+                    <label for="sivusto-title">Otsikko</label>
+                    <input id="sivusto-title" name="title" type="text" required maxlength="120"
+                        placeholder="[Sivusto] esim. Rikkoutunut linkki Majakassa">
+                </p>
+                <p>
+                    <label for="sivusto-body">Kuvaus</label>
+                    <textarea id="sivusto-body" name="body" required rows="8" placeholder="## Sivu tai tiedosto
+
+## Mitä on vialla
+
+## Ehdotettu korjaus (valinnainen)"></textarea>
+                </p>
+                <p>
+                    <button type="submit" class="btn btn-primary">Jatka GitHubiin — sivusto</button>
+                    <a class="btn" href="https://github.com/Mikko-Huuskonen-Pro/Katselin.fi/issues/new?template=sivusto.yml" rel="noopener">Tai GitHub-pohja</a>
+                </p>
+            </form>
+        </section>
+
+        <section>
+            <h2>Tietoturva</h2>
+            <p>
+                Haavoittuvuudet eivät kuulu julkiseen issueen. Lue
+                <a href="kehittajille-tietoturva.html">tietoturvaohje</a> ja ilmoita suojatusti.
+            </p>
+        </section>
+
+        <section>
+            <h2>Tietosuoja (GDPR)</h2>
+            <p>
+                Palautelomake ei kerää tietoja itse. Kun vahvistat issuen GitHubissa,
+                tallennamme vain sen, mitä itse kirjoitat ja mitä GitHub liittää tiliisi
+                (käyttäjänimi, aikaleima). Issue on <strong>julkinen</strong>, ellei
+                projektia myöhemmin suljeta.
+            </p>
+            <ul>
+                <li>Älä kirjoita nimeä, osoitetta, henkilötunnusta tai terveystietoja.</li>
+                <li>GitHub käsittelee tietoja Yhdysvalloissa — katso <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" rel="noopener">GitHubin tietosuojaseloste</a>.</li>
+                <li>Voit pyytää issuen poistamista ottamalla yhteyttä ylläpitäjään tai sulkemalla issuen itse.</li>
+            </ul>
+            <p>
+                Vaihtoehto ilman GitHub-tiliä: lähetä sähköpostia ylläpitäjälle
+                (katso GitHub-profiili) — älä lähetä arkaluonteisia tietoja sähköpostissakaan.
+            </p>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="page">
+            <p class="footer-tagline">Built on Servo. Made in Finland.</p>
+            <div class="footer-row">
+                <span>&copy; 2026 Mikko Huuskonen · <a href="../LICENSE.md">CC BY 4.0</a></span>
+                <span>
+                    <a href="majakka.html">Majakka</a>
+                    ·
+                    <a href="../sv/palaute.html" hreflang="sv">På svenska</a>
+                </span>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

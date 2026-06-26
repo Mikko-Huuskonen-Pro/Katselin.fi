@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Palautesivu ja kehitysblogi | Kehitysblogi | Katselin</title>
+    <meta name="description" content="katselin.fi sai palautelomakkeen ja kehitysblogin. Ilmoitukset tallentuvat GitHub-issueina.">
+    <meta name="color-scheme" content="dark">
+    <link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="../../style.css">
+    <link rel="canonical" href="https://katselin.fi/fi/blogi/2026-06-26-palaute-ja-blogi.html">
+</head>
+<body>
+    <header class="site-header">
+        <div class="page">
+            <a class="brand" href="../" aria-label="Katselin – etusivu">
+                <img class="brand-mark" src="../../assets/favicon.svg" alt="">
+                <span>Katselin</span>
+            </a>
+            <nav class="nav" aria-label="Päävalikko">
+                <a href="../">Katselin</a>
+                <a href="../majakka.html">Majakka</a>
+                <a href="./" aria-current="page">Blogi</a>
+                <a href="../kehittajille.html">Kehittäjille</a>
+                <a href="../filosofia.html">Filosofia</a>
+                <a href="https://github.com/Mikko-Huuskonen-Pro/Katselin.fi" rel="noopener">GitHub</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="page blog-post">
+        <p class="blog-meta"><a href="./">← Blogi</a> · <time datetime="2026-06-26">26.6.2026</time></p>
+        <h1>Palautesivu ja kehitysblogi</h1>
+
+        <p>
+            Katselin.fi on nyt enemmän kuin staattinen esittely. Sivustolle tuli kaksi
+            uutta osaa: <a href="../palaute.html">palautesivu</a> ja tämä kehitysblogi.
+        </p>
+
+        <h2>Palaute ilman erillistä palvelinta</h2>
+        <p>
+            Sivusto pysyy pelkkänä HTML:änä — ei JavaScriptiä, ei build-vaihetta.
+            Vikailmoitukset ja palaute kulkevat GitHub Issues -palvelun kautta: lomake
+            avaa esitäytetyn issue-luonnin, ja käyttäjä vahvistaa sen omalla
+            GitHub-tilillään. Ilmoitukset tallentuvat tähän repoon, josta ne on helppo
+            seurata ja käsitellä.
+        </p>
+        <p>
+            Tietosuojan kannalta emme kerää tietoja lomakkeella. Käyttäjä näkee ennen
+            lähetystä, että issue on julkinen, eikä lomake pyydä henkilötietoja. Tämä
+            on yksinkertainen ja GDPR-yhteensopiva malli avoimelle projektille.
+        </p>
+
+        <h2>Blogi kehityksen seuraamiseen</h2>
+        <p>
+            Tekninen dokumentaatio elää <code>docs/</code>-hakemistossa ja kehittäjäsivuilla.
+            Blogi on kevyempi kerros: lyhyitä päivityksiä siitä, mitä on tehty ja mikä
+            on seuraavaksi. Tarkempi tilannekuva on edelleen
+            <a href="../nykytila.html">nykytila-sivulla</a>.
+        </p>
+
+        <h2>Seuraavaksi</h2>
+        <ul>
+            <li>Julkinen beta Windowsille ja Androidille — valmistelu käynnissä.</li>
+            <li>Avomeri erillisenä selaustilana — arkkitehtuuripäätös ennen toteutusta.</li>
+            <li>Telakka-kierrokset Kelan ja muiden tärkeiden sivujen yhteensopivuudelle.</li>
+        </ul>
+    </main>
+
+    <footer class="site-footer">
+        <div class="page">
+            <p class="footer-tagline">Built on Servo. Made in Finland.</p>
+            <div class="footer-row">
+                <span>&copy; 2026 Mikko Huuskonen · <a href="../../LICENSE.md">CC BY 4.0</a></span>
+                <span><a href="./">← Blogi</a></span>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

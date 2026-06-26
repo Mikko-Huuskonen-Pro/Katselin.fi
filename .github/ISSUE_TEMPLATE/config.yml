@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Palautesivu (katselin.fi)
+    url: https://katselin.fi/fi/palaute.html
+    about: Ilmoita virheestä tai ehdota parannusta verkossa
+  - name: Tietoturva (ei julkinen issue)
+    url: https://katselin.fi/fi/kehittajille-tietoturva.html
+    about: Haavoittuvuudet ilmoitetaan suojatusti, ei julkisena GitHub-issuena

@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Fyren – användarguide | Katselin</title>
+    <meta name="description" content="Katselins användarguide: var man laddar ner, hur webbläsaren beter sig och vad det maritima ordförrådet betyder.">
+    <meta name="color-scheme" content="dark">
+    <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+    <link rel="alternate icon" href="../assets/logo.png" type="image/png">
+    <link rel="apple-touch-icon" href="../assets/logo.png">
+    <link rel="alternate" hreflang="fi" href="/fi/majakka.html">
+    <link rel="alternate" hreflang="sv" href="/sv/fyren.html">
+    <link rel="canonical" href="https://katselin.fi/sv/fyren.html">
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="page">
+            <a class="brand" href="./" aria-label="Katselin – startsida">
+                <img class="brand-mark" src="../assets/favicon.svg" alt="">
+                <span>Katselin</span>
+            </a>
+            <nav class="nav" aria-label="Huvudmeny">
+                <a href="./">Katselin</a>
+                <a href="fyren.html" aria-current="page">Fyren</a>
+                <a href="blogg/">Blogg</a>
+                <a href="utvecklare.html">Utvecklare</a>
+                <a href="filosofi.html">Filosofi</a>
+                <a href="https://github.com/Mikko-Huuskonen-Pro/Katselin.fi" rel="noopener">GitHub</a>
+                <span class="lang" aria-label="Språk">
+                    <a href="../fi/majakka.html" hreflang="fi">FI</a>
+                    <a href="fyren.html" aria-current="true">SV</a>
+                </span>
+            </nav>
+        </div>
+    </header>
+
+    <main class="page">
+        <h1>🛟 Fyren</h1>
+        <p class="tagline">Användarguide för Katselin.</p>
+
+        <section id="ladda-ner">
+            <h2>Ladda ner</h2>
+            <p>
+                Katselin är under aktiv utveckling och officiella installationspaket
+                har ännu inte publicerats. När den första öppna betan finns tillgänglig
+                hittar du den på den här sidan samt under projektets GitHub-releaser.
+            </p>
+            <ul>
+                <li>Windows 11 – beta på väg</li>
+                <li>Android – beta på väg</li>
+                <li>Linux, macOS – utreds</li>
+            </ul>
+            <p>
+                Du kan följa utvecklingen i
+                <a href="https://github.com/Mikko-Huuskonen-Pro/Kotisatama" rel="noopener">Katselins källkodsrepo</a>.
+            </p>
+        </section>
+
+        <section>
+            <h2>Hur Katselin fungerar</h2>
+            <p>
+                Katselin öppnas alltid i <strong>Hemmahamnen</strong>. Startsidan visar
+                en trygg snabbmeny: sökfält, favoriter och Varustamons program.
+            </p>
+            <p>
+                Adressfältet fungerar i Hamnen lite annorlunda än i en vanlig webbläsare.
+                I stället för att skicka ett sökord till Google skickas det till
+                Hamnens egen lokala sökning. Till exempel:
+            </p>
+            <ul>
+                <li><code>kela</code> → leder direkt till FPA:s webbplats.</li>
+                <li><code>kela.fi</code> → leder direkt till FPA:s webbplats.</li>
+                <li><code>suomi</code> → leder till Suomi.fi.</li>
+                <li><code>suomi.fi</code> → leder till Suomi.fi.</li>
+            </ul>
+            <p>
+                Sökningen sker mot ett förinstallerat index på enheten. När nätet inte
+                fungerar kan indexet användas offline efter att det har laddats ner.
+            </p>
+            <p>
+                Om du vill utforska det öppna internet väljer du separat
+                <em>Ge dig ut på Öppna havet</em>. Öppna havet har en egen surfsession
+                utan minne och lämnar inga spår.
+                <a href="filosofi.html">Läs om Öppna havet och Bryggan</a>.
+            </p>
+        </section>
+
+        <section>
+            <h2>Bryggan</h2>
+            <p>
+                Bryggan är användarens eget område mellan Hamnen och Öppna havet. Du kan
+                lägga till en webbplats du använder regelbundet genom att välja
+                <em>Lägg till på hemmahamnens brygga</em>. Sidan visas i sökningar och
+                genvägar men ingår ännu inte i den kurerade Hamnen.
+            </p>
+            <p>
+                I Junior- och Senior-profiler kan en anhörig lägga till sidor på Bryggan.
+            </p>
+        </section>
+
+        <section id="nulage">
+            <h2>Nuläge</h2>
+            <p>
+                Hamnen och lokal sökning fungerar. Öppna havet är fortfarande under utveckling.
+                <a href="nykytila.html">Läs detaljerad status</a>.
+            </p>
+        </section>
+
+        <section>
+            <h2>Ordlista</h2>
+            <p>
+                Katselin använder ett enhetligt maritimt ordförråd. Samma metafor löper
+                genom hela gränssnittet så att produkten känns som en helhet.
+            </p>
+            <table>
+                <thead>
+                    <tr><th>Begrepp</th><th>Betydelse</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>🏠 Hemmahamnen</td><td>Programmets trygga startsida.</td></tr>
+                    <tr><td>⚓ Hamnen</td><td>Området med vitlistade, betrodda webbplatser.</td></tr>
+                    <tr><td>⚓ Bryggan</td><td>Webbplatser som användaren själv har godkänt – mellan Hamnen och Öppna havet.</td></tr>
+                    <tr><td>🌐 Öppna havet</td><td>Det öppna internet som ett separat surfläge utan minne.</td></tr>
+                    <tr><td>🌊 Storm</td><td>Ingen nätförbindelse eller tjänsten svarar inte.</td></tr>
+                    <tr><td>🧰 Varustamo</td><td>Det betrodda programlagret (ungefär "rederiet").</td></tr>
+                    <tr><td>📦 Lastrum</td><td>Installerade program och lokalt innehåll.</td></tr>
+                    <tr><td>🛟 Fyren</td><td>Anvisningar, vägledning och stöd.</td></tr>
+                    <tr><td>📜 Loggbok</td><td>Händelser, meddelanden och diagnostik.</td></tr>
+                    <tr><td>🏗 Varvet</td><td>Utvecklingsmodellen som lagar luckorna i Servo-motorn sida för sida.</td></tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section>
+            <h2>Användarprofiler</h2>
+            <p>
+                Katselin stöder tre användarroller. Den valda profilen bestämmer hur
+                lätt det är att gå utanför Hamnen.
+            </p>
+            <ul>
+                <li><strong>Junior</strong> – Öppna havet avstängt. Barnet ser bara Hamnen och de webbplatser som en anhörig har lagt till på Bryggan.</li>
+                <li><strong>Senior</strong> – Öppna havet är avstängt som standard. En anhörig eller användaren själv kan aktivera det i inställningarna.</li>
+                <li><strong>Normal</strong> – Öppna havet aktiverat. Användaren kan när som helst ge sig ut på Öppna havet.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Stöd och feedback</h2>
+            <p>
+                Katselin är ett öppet projekt. Det enklaste sättet att rapportera fel
+                eller skicka feedback är <a href="palaute.html">feedbacksidan</a> —
+                rapporten sparas som ett GitHub-ärende i det här repot.
+            </p>
+            <ul>
+                <li><a href="palaute.html#webblasare">Rapportera webbläsarfel</a></li>
+                <li><a href="palaute.html#feedback">Skicka feedback</a></li>
+                <li>Säkerhetsproblem: <a href="../fi/kehittajille-tietoturva.html">säkerhetsanvisning</a> — inte som offentlig issue.</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="page">
+            <p class="footer-tagline">Built on Servo. Made in Finland.</p>
+            <div class="footer-row">
+                <span>&copy; 2026 Mikko Huuskonen · <a href="../LICENSE.md">CC BY 4.0</a></span>
+                <span>
+                    <a href="https://github.com/Mikko-Huuskonen-Pro/Katselin.fi" rel="noopener">GitHub</a>
+                    ·
+                    <a href="../fi/majakka.html" hreflang="fi">Suomeksi</a>
+                </span>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

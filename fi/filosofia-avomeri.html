@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Avomeri ja Laituri | Filosofia | Katselin</title>
+    <meta name="description" content="Katselimen Avomeri-konsepti: Satama, Laituri ja avoin internet erillisinä selaustiloina.">
+    <meta name="color-scheme" content="dark">
+    <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="canonical" href="https://katselin.fi/fi/filosofia-avomeri.html">
+</head>
+<body>
+    <header class="site-header">
+        <div class="page">
+            <a class="brand" href="./" aria-label="Katselin – etusivu">
+                <img class="brand-mark" src="../assets/favicon.svg" alt="">
+                <span>Katselin</span>
+            </a>
+            <nav class="nav" aria-label="Päävalikko">
+                <a href="./">Katselin</a>
+                <a href="majakka.html">Majakka</a>
+                <a href="blogi/">Blogi</a>
+                <a href="kehittajille.html">Kehittäjille</a>
+                <a href="filosofia.html" aria-current="page">Filosofia</a>
+                <a href="https://github.com/Mikko-Huuskonen-Pro/Katselin.fi" rel="noopener">GitHub</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="page">
+        <h1>Avomeri ja Laituri</h1>
+        <p class="tagline">Satamassa asutaan. Avomerellä käydään.</p>
+
+        <nav class="doc-nav" aria-label="Filosofiadokumentaatio">
+            <h2>Filosofia</h2>
+            <ul>
+                <li><a href="filosofia.html">Yhteenveto</a></li>
+                <li><a href="filosofia-avomeri.html" aria-current="page">Avomeri ja Laituri</a></li>
+                <li><a href="https://github.com/Mikko-Huuskonen-Pro/Katselin.fi/blob/main/docs/philosophy/filosofia.md" rel="noopener">Täysi filosofia (Markdown)</a></li>
+            </ul>
+        </nav>
+
+        <section>
+            <h2>Visio</h2>
+            <blockquote>Satamassa asutaan. Avomerellä käydään.</blockquote>
+            <p>
+                Kun käyttäjä haluaa poistua kuratoidusta ympäristöstä tutkimaan muuta verkkoa,
+                hän voi lähteä Avomerelle. Avomeri ei ole toinen selain — se on Katselimen
+                erityinen selaustila.
+            </p>
+        </section>
+
+        <section>
+            <h2>Satama</h2>
+            <ul>
+                <li>Kuratoidut sivustot ja Varustamon sovellukset</li>
+                <li>Pysyvät kirjautumiset ja evästeet sallittu</li>
+                <li>Meilisearch-pohjainen paikallinen haku</li>
+            </ul>
+            <p>Satama on oletustila.</p>
+        </section>
+
+        <section>
+            <h2>Avomeri</h2>
+            <ul>
+                <li>Ei pysyvää profiilia, historiaa tai evästeitä</li>
+                <li>Ei pysyvää localStoragea tai IndexedDB:tä</li>
+                <li>Oikeudet estetty oletuksena</li>
+            </ul>
+            <p>Kun Avomeri suljetaan, kaikki sen data poistetaan.</p>
+        </section>
+
+        <section>
+            <h2>Laituri</h2>
+            <p>
+                Käyttäjän oma alue Sataman ja Avomeren välissä. Sivustot, joita käytät
+                säännöllisesti, mutta jotka eivät ole vielä kuratoitua Satamaa.
+            </p>
+            <p>
+                <strong>Satama</strong> = yhteisön luottamus.
+                <strong>Laituri</strong> = käyttäjän luottamus.
+            </p>
+            <p>Polku: Avomeri → Laituri → Satama. Kaikkien sivustojen ei tarvitse koskaan päästä Satamaan.</p>
+        </section>
+
+        <section>
+            <h2>Eri tilassa eri säännöt</h2>
+            <p>
+                Sivustojen hallinta tapahtuu Sataman ja Avomeren tasolla. Satamassa haku
+                käyttää paikallista Meilisearch-indeksiä. Avomeren hakuja ei sekoiteta
+                Sataman whitelistiin.
+            </p>
+<pre><code>Katselin
+├─ Satama
+└─ Avomeri</code></pre>
+            <p>
+                Avomeri on erillinen tila — ei vahingossa tapahtuva fallback, jos Sataman
+                haku ei löydä vastausta.
+            </p>
+        </section>
+
+        <section>
+            <h2>Käyttäjäprofiilit</h2>
+            <table>
+                <thead>
+                    <tr><th>Profiili</th><th>Avomeri</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>Junior</td><td>Pois käytöstä</td></tr>
+                    <tr><td>Senior</td><td>Pois käytöstä oletuksena</td></tr>
+                    <tr><td>Normaali</td><td>Käytössä</td></tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section>
+            <h2>Hakukone Avomerellä</h2>
+            <p>
+                Oletus: <strong>Qwant</strong> — eurooppalainen, yksityisyyttä kunnioittava
+                hakukone. Vaihtoehdot: Startpage, DuckDuckGo.
+            </p>
+        </section>
+
+        <section>
+            <h2>Filosofia</h2>
+            <p>
+                Katselin ei pyri estämään internetiä. Katselin pyrkii tekemään internetin
+                käytöstä ymmärrettävää.
+            </p>
+            <blockquote>
+                Satama on koti. Laituri on oma vene. Avomeri on maailma kotisataman ulkopuolella.
+            </blockquote>
+            <p>Käyttäjä tietää aina kummassa maailmassa hän on.</p>
+        </section>
+
+        <p class="doc-source">
+            Lähde: <a href="https://github.com/Mikko-Huuskonen-Pro/Katselin.fi/blob/main/docs/philosophy/avomeri.md" rel="noopener">docs/philosophy/avomeri.md</a>
+        </p>
+    </main>
+
+    <footer class="site-footer">
+        <div class="page">
+            <p class="footer-tagline">Built on Servo. Made in Finland.</p>
+            <div class="footer-row">
+                <span>&copy; 2026 Mikko Huuskonen · <a href="../LICENSE.md">CC BY 4.0</a></span>
+                <span><a href="filosofia.html">← Filosofia</a></span>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

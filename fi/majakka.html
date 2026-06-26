@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Majakka – käyttöopas | Katselin</title>
+    <meta name="description" content="Katselimen käyttöopas: mistä ladata, kuinka selain käyttäytyy, ja mitä meriteeman käsitteet tarkoittavat.">
+    <meta name="color-scheme" content="dark">
+    <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+    <link rel="alternate icon" href="../assets/logo.png" type="image/png">
+    <link rel="apple-touch-icon" href="../assets/logo.png">
+    <link rel="alternate" hreflang="fi" href="/fi/majakka.html">
+    <link rel="alternate" hreflang="sv" href="/sv/fyren.html">
+    <link rel="canonical" href="https://katselin.fi/fi/majakka.html">
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="page">
+            <a class="brand" href="./" aria-label="Katselin – etusivu">
+                <img class="brand-mark" src="../assets/favicon.svg" alt="">
+                <span>Katselin</span>
+            </a>
+            <nav class="nav" aria-label="Päävalikko">
+                <a href="./">Katselin</a>
+                <a href="majakka.html" aria-current="page">Majakka</a>
+                <a href="blogi/">Blogi</a>
+                <a href="kehittajille.html">Kehittäjille</a>
+                <a href="filosofia.html">Filosofia</a>
+                <a href="https://github.com/Mikko-Huuskonen-Pro/Katselin.fi" rel="noopener">GitHub</a>
+                <span class="lang" aria-label="Kieli">
+                    <a href="majakka.html" aria-current="true">FI</a>
+                    <a href="../sv/fyren.html" hreflang="sv">SV</a>
+                </span>
+            </nav>
+        </div>
+    </header>
+
+    <main class="page">
+        <h1>🛟 Majakka</h1>
+        <p class="tagline">Käyttöopas Katselimeen.</p>
+
+        <section id="lataa">
+            <h2>Lataa</h2>
+            <p>
+                Katselin on aktiivisessa kehityksessä eikä virallisia asennuspaketteja ole
+                vielä julkaistu. Kun ensimmäinen julkinen beta on saatavilla, sen löytää
+                tältä sivulta sekä projektin GitHub-julkaisuista.
+            </p>
+            <ul>
+                <li>Windows 11 – beta tulossa</li>
+                <li>Android – beta tulossa</li>
+                <li>Linux, macOS – tutkitaan</li>
+            </ul>
+            <p>
+                Voit seurata kehityksen vaiheita
+                <a href="https://github.com/Mikko-Huuskonen-Pro/Kotisatama" rel="noopener">Katselimen lähdekoodirepossa</a>.
+            </p>
+        </section>
+
+        <section>
+            <h2>Miten Katselin käyttäytyy</h2>
+            <p>
+                Katselin avautuu aina <strong>Kotisatamaan</strong>. Etusivu näyttää
+                turvallisen pikavalikon: hakukentän, suosikit ja Varustamon sovellukset.
+            </p>
+            <p>
+                Osoitekenttä toimii Satamassa hieman eri tavoin kuin tavanomaisessa selaimessa.
+                Sen sijaan että kirjoittaisit hakusanan Googleen, kirjoitat sen suoraan
+                Sataman omaan paikalliseen hakuun. Esimerkiksi:
+            </p>
+            <ul>
+                <li><code>kela</code> → ohjaa suoraan Kela.fi-sivulle</li>
+                <li><code>kela.fi</code> → ohjaa suoraan Kela.fi-sivulle</li>
+                <li><code>suomi</code> → ohjaa Suomi.fi-sivustolle</li>
+                <li><code>suomi.fi</code> → ohjaa Suomi.fi-sivustolle</li>
+            </ul>
+            <p>
+                Haku tapahtuu laitteelle esiladatusta indeksistä. Kun verkko ei toimi,
+                indeksi toimii offline-tilassa, kun se on kerran ladattu.
+            </p>
+            <p>
+                Jos haluat tutkia avointa internetiä, valitset erikseen <em>Lähde Avomerelle</em>.
+                Avomerellä on oma muistiton selausistunto, joka ei jätä jälkiä.
+                <a href="filosofia-avomeri.html">Lue Avomeri ja Laituri</a>.
+            </p>
+        </section>
+
+        <section>
+            <h2>Laituri</h2>
+            <p>
+                Laituri on käyttäjän oma alue Sataman ja Avomeren välissä. Voit lisätä
+                sivuston, jota käytät säännöllisesti, valitsemalla <em>Lisää kotisataman laiturille</em>.
+                Sivusto ilmestyy hakuihin ja pikavalintoihin, mutta se ei ole vielä osa
+                kuratoitua Satamaa.
+            </p>
+            <p>
+                Junior- ja Senior-profiileissa omainen voi lisätä sivuja laiturille.
+            </p>
+        </section>
+
+        <section id="nykytila">
+            <h2>Nykytila</h2>
+            <p>
+                Satama ja paikallinen haku toimivat. Avomeri on vielä kehityksessä.
+                <a href="nykytila.html">Lue tarkempi tilannekuvaus</a>.
+            </p>
+        </section>
+
+        <section>
+            <h2>Sanasto</h2>
+            <p>
+                Katselin käyttää yhtenäistä meriteemaista sanastoa. Sama metafora kulkee
+                koko käyttöliittymässä, jotta tuote tuntuu yhdeltä kokonaisuudelta.
+            </p>
+            <table>
+                <thead>
+                    <tr><th>Käsite</th><th>Merkitys</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>🏠 Kotisatama</td><td>Sovelluksen turvallinen etusivu.</td></tr>
+                    <tr><td>⚓ Satama</td><td>Luotettujen (whitelist) verkkosivujen alue.</td></tr>
+                    <tr><td>⚓ Laituri</td><td>Käyttäjän itse hyväksymät sivut Sataman ja Avomeren välissä.</td></tr>
+                    <tr><td>🌐 Avomeri</td><td>Avoin internet erillisenä, muistittomana selaustilana.</td></tr>
+                    <tr><td>🌊 Myrsky</td><td>Ei verkkoyhteyttä tai palvelu ei vastaa.</td></tr>
+                    <tr><td>🧰 Varustamo</td><td>Luotettu sovellusvarasto.</td></tr>
+                    <tr><td>📦 Ruuma</td><td>Asennetut sovellukset ja paikallinen sisältö.</td></tr>
+                    <tr><td>🛟 Majakka</td><td>Ohjeet, opastus ja tuki.</td></tr>
+                    <tr><td>📜 Lokikirja</td><td>Tapahtumat, ilmoitukset ja diagnostiikka.</td></tr>
+                    <tr><td>🏗 Telakka</td><td>Kehitysmalli, jolla Servo-moottorin puutteet korjataan sivu kerrallaan.</td></tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section>
+            <h2>Käyttäjäprofiilit</h2>
+            <p>
+                Katselin tukee kolmea käyttäjäroolia. Profiilin valinta määrittää, miten
+                helposti pääsee Sataman ulkopuolelle.
+            </p>
+            <ul>
+                <li><strong>Junior</strong> – Avomeri pois käytöstä. Lapsi näkee vain Sataman ja omaisen lisäämät Laiturin sivut.</li>
+                <li><strong>Senior</strong> – Avomeri pois käytöstä oletuksena. Omainen tai käyttäjä voi ottaa sen käyttöön asetuksista.</li>
+                <li><strong>Normaali</strong> – Avomeri käytössä. Käyttäjä voi siirtyä Avomerelle milloin tahansa.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Tuki ja palaute</h2>
+            <p>
+                Katselin on avoin projekti. Vikailmoitukset, palautteet ja ideat ovat
+                tervetulleita — helpoin tapa on <a href="palaute.html">palautesivu</a>,
+                josta ilmoitus tallentuu GitHub-issueen tähän repoon.
+            </p>
+            <ul>
+                <li><a href="palaute.html#selain">Ilmoita selainvikailmoitus</a></li>
+                <li><a href="palaute.html#palaute">Lähetä palaute tai ehdotus</a></li>
+                <li>Tietoturva-aukoista: <a href="kehittajille-tietoturva.html">tietoturvaohje</a> — ei julkisena issuena.</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="page">
+            <p class="footer-tagline">Built on Servo. Made in Finland.</p>
+            <div class="footer-row">
+                <span>&copy; 2026 Mikko Huuskonen · <a href="../LICENSE.md">CC BY 4.0</a></span>
+                <span>
+                    <a href="https://github.com/Mikko-Huuskonen-Pro/Katselin.fi" rel="noopener">GitHub</a>
+                    ·
+                    <a href="../sv/fyren.html" hreflang="sv">På svenska</a>
+                </span>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

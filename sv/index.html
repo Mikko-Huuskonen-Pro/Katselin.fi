@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Katselin – En webbläsare för dem som vill veta var de är på nätet</title>
+    <meta name="description" content="Katselin är en finländsk webbläsare som gör viktiga nättjänster trygga. En vitlistbaserad Hamn håller användaren i hemmahamnen, men tillåter också Öppna havet.">
+    <meta name="color-scheme" content="dark">
+    <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+    <link rel="alternate icon" href="../assets/logo.png" type="image/png">
+    <link rel="apple-touch-icon" href="../assets/logo.png">
+    <link rel="alternate" hreflang="fi" href="/fi/">
+    <link rel="alternate" hreflang="sv" href="/sv/">
+    <link rel="alternate" hreflang="x-default" href="/">
+    <link rel="canonical" href="https://katselin.fi/sv/">
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="page">
+            <a class="brand" href="./" aria-label="Katselin – startsida">
+                <img class="brand-mark" src="../assets/favicon.svg" alt="">
+                <span>Katselin</span>
+            </a>
+            <nav class="nav" aria-label="Huvudmeny">
+                <a href="./" aria-current="page">Katselin</a>
+                <a href="fyren.html">Fyren</a>
+                <a href="blogg/">Blogg</a>
+                <a href="utvecklare.html">Utvecklare</a>
+                <a href="filosofi.html">Filosofi</a>
+                <a href="https://github.com/Mikko-Huuskonen-Pro/Katselin.fi" rel="noopener">GitHub</a>
+                <span class="lang" aria-label="Språk">
+                    <a href="../fi/" hreflang="fi">FI</a>
+                    <a href="./" aria-current="true">SV</a>
+                </span>
+            </nav>
+        </div>
+    </header>
+
+    <main class="page">
+        <section class="hero">
+            <img class="hero-logo" src="../assets/logo.png" alt="Katselins logotyp: en segelbåt, vågor och en fyr">
+            <h1>Katselin</h1>
+            <p class="tagline">En webbläsare för dem som vill veta var de är på nätet.</p>
+            <div class="cta">
+                <a class="btn btn-primary" href="fyren.html#ladda-ner">Ladda ner</a>
+                <a class="btn" href="fyren.html">Fyren</a>
+                <a class="btn" href="blogg/">Blogg</a>
+                <a class="btn" href="utvecklare.html">Utvecklare</a>
+            </div>
+        </section>
+
+        <section>
+            <h2>Vad Katselin är</h2>
+            <p>
+                Katselin är en finländsk webbläsare som gör viktiga nättjänster trygga.
+                Den försöker inte ersätta hela internet – den gör vardagens digitala
+                tjänster begripliga och tillförlitliga.
+            </p>
+            <p>
+                Webbläsaren bygger på motorn <a href="https://servo.org/" rel="noopener">Servo</a>.
+                Ovanpå den lägger Katselin till <em>Hamnen</em>: en kurerad och trygg miljö
+                där användaren alltid vet var hen är.
+            </p>
+        </section>
+
+        <section>
+            <h2>Två världar</h2>
+            <div class="cards">
+                <article class="card">
+                    <h3>⚓ Hamnen</h3>
+                    <p>
+                        En betrodd miljö: kurerade webbplatser, lokal sökning och bestående
+                        inloggningar. Hamnen är Katselins standardläge.
+                    </p>
+                </article>
+                <article class="card">
+                    <h3>🌐 Öppna havet</h3>
+                    <p>
+                        En upptäcktsresa på det öppna internet. Ingen bestående profil,
+                        ingen historik, inga kakor. När Öppna havet stängs raderas all
+                        dess data.
+                    </p>
+                </article>
+                <article class="card">
+                    <h3>⚓ Bryggan</h3>
+                    <p>
+                        Användarens egen plats mellan Hamnen och Öppna havet. Webbplatser
+                        som du använder regelbundet men som inte ännu ingår i den
+                        kurerade Hamnen.
+                    </p>
+                </article>
+                <article class="card">
+                    <h3>🧰 Varustamo (Rederiet)</h3>
+                    <p>
+                        Lagret för betrodda program: Pulloposti, Var är jag och andra
+                        Katselin-program som inte behöver hela det öppna nätet.
+                    </p>
+                </article>
+            </div>
+        </section>
+
+        <section>
+            <h2>Vem Katselin är gjord för</h2>
+            <p>
+                Katselin är byggd särskilt för dem som inte får tappa kontakten med
+                viktiga digitala tjänster – FPA, Suomi.fi, OmaKanta, skatteförvaltningen
+                och bankidentifiering. Katselin håller användaren i hemmahamnen, där
+                dessa tjänster fungerar tryggt och hittas på ett förutsägbart sätt.
+            </p>
+            <p>
+                Den passar äldre, barn, anhöriga som hjälper sina närstående, och alla
+                som vill veta exakt var de är på nätet.
+            </p>
+        </section>
+
+        <section>
+            <h2>Nuläge</h2>
+            <p>
+                Katselin är under aktiv utveckling. Vitlistebaserad surfning fungerar
+                redan: <code>kela</code>, <code>kela.fi</code>, <code>suomi</code> och
+                <code>suomi.fi</code> leder till rätt sidor. Servo-motorn förbättras via
+                <a href="filosofi.html#varvet">Varvet</a> sida för sida.
+            </p>
+            <p>
+                <strong>Öppna havet</strong> är ännu ofärdigt och fungerar inte tillförlitligt
+                som öppet surfläge. Hamnen är ändå användbar i utvecklingsversionen.
+            </p>
+            <p>
+                <a href="nykytila.html">Läs detaljerad status</a> ·
+                <a href="blogg/">Utvecklingsblogg</a> ·
+                <a href="filosofi.html">Filosofi</a> ·
+                <a href="utvecklare.html">Utvecklare</a>
+            </p>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="page">
+            <p class="footer-tagline">Built on Servo. Made in Finland.</p>
+            <div class="footer-row">
+                <span>&copy; 2026 Mikko Huuskonen · <a href="../LICENSE.md">CC BY 4.0</a></span>
+                <span>
+                    <a href="https://github.com/Mikko-Huuskonen-Pro/Katselin.fi" rel="noopener">GitHub</a>
+                    ·
+                    <a href="../fi/" hreflang="fi">Suomeksi</a>
+                </span>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
